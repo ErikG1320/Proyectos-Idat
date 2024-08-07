@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServicioWebApiGaspar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b9f178a56ee8f187cac9290fbe18faf8609a0d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServicioWebApiGaspar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServicioWebApiGaspar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

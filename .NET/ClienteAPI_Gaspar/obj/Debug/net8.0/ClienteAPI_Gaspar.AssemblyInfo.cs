@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClienteAPI_Gaspar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b9f178a56ee8f187cac9290fbe18faf8609a0d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClienteAPI_Gaspar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClienteAPI_Gaspar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
