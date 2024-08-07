@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TablePosts from './TablePosts';
-
 const ListarPosts = () => {
             //Variables de estado que alamacene la lista de posts
         const [lista,setlista] =useState([])
@@ -20,8 +19,9 @@ const ListarPosts = () => {
     return (
         <div>
             <TablePosts
-            posts={lista}
-            ></TablePosts>
+                data={lista}
+                titulo='Listado de Posts'
+            />
         </div>
     );
 };

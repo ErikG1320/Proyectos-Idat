@@ -1,5 +1,6 @@
 import React from 'react';
 import ListarPosts from './Component12/ListarPosts';
+import PostsUsuario from './Component12/PostsUsuario';
 // Importar componentes
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path='Tabla_Clientes' element={<TableClientes />} />
       </Routes> */}
       <ListarPosts></ListarPosts>
+      <PostsUsuario></PostsUsuario>
     </div>
   );
 }

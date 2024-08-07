@@ -1,9 +1,9 @@
 //rsc
 import React from 'react';
 
-const TablePosts = () => {
+const TablePosts = (props) => {
     // Implementación de la tabla con los props
-    const {data,titulo} = this.props;
+    const {data,titulo} = props;
 
     return (
         <div>
@@ -20,10 +20,10 @@ const TablePosts = () => {
                 <tbody>
                     {data.map((post, index) => (
                         <tr key={index}>
-                            <td>{post.Id}</td>
+                            <td>{post.id}</td>
                             <td>{post.userId}</td>
-                            <td>{post.Title}</td>
-                            <td>{post.Body}</td>
+                            <td>{post.title}</td>
+                            <td>{post.body}</td>
                         </tr>
                     ))}
                 </tbody>
