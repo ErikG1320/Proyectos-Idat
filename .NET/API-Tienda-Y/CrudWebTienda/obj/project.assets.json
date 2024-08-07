@@ -4560,11 +4560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
       "projectName": "CrudWebTienda",
-      "projectPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

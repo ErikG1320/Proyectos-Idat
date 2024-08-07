@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataAccess
-build_property.ProjectDir = C:\Users\Dev Erik\desktop\Proyectos\.NET\EVC2.NET\DataAccess\
+build_property.ProjectDir = C:\Users\Dev Erik\Desktop\Proyectos-Idat\.NET\EVC2.NET\DataAccess\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

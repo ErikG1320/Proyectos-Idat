@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\WebApiCrud\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\WebApiCrud\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\WebApiCrud\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

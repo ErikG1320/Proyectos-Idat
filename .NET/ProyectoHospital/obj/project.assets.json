@@ -7845,11 +7845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\ProyectoHospital\\ProyectoHospital.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ProyectoHospital\\ProyectoHospital.csproj",
       "projectName": "ProyectoHospital",
-      "projectPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\ProyectoHospital\\ProyectoHospital.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ProyectoHospital\\ProyectoHospital.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\ProyectoHospital\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ProyectoHospital\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

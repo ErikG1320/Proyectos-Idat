@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj": {}
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj": {
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj",
+        "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj",
         "projectName": "ServicioWebApiGaspar",
-        "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj",
+        "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ServicioWebApiGaspar\\ServicioWebApiGaspar.csproj",
         "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\ServicioWebApiGaspar\\obj\\",
+        "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ServicioWebApiGaspar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

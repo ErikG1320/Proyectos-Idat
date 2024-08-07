@@ -2990,11 +2990,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\WebApiCrud\\PresentationLayerCrudApi\\PresentationLayerCrudApi.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\PresentationLayerCrudApi\\PresentationLayerCrudApi.csproj",
       "projectName": "PresentationLayerCrudApi",
-      "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\WebApiCrud\\PresentationLayerCrudApi\\PresentationLayerCrudApi.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\PresentationLayerCrudApi\\PresentationLayerCrudApi.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\WebApiCrud\\PresentationLayerCrudApi\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\PresentationLayerCrudApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

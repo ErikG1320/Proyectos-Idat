@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\asp.netEVC1\\asp.netEVC1.csproj": {}
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\asp.netEVC1\\asp.netEVC1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\asp.netEVC1\\asp.netEVC1.csproj": {
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\asp.netEVC1\\asp.netEVC1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\asp.netEVC1\\asp.netEVC1.csproj",
+        "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\asp.netEVC1\\asp.netEVC1.csproj",
         "projectName": "asp.netEVC1",
-        "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\asp.netEVC1\\asp.netEVC1.csproj",
+        "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\asp.netEVC1\\asp.netEVC1.csproj",
         "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\asp.netEVC1\\obj\\",
+        "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\asp.netEVC1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -785,11 +785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\ClienteAPI_Gaspar\\ClienteAPI_Gaspar.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ClienteAPI_Gaspar\\ClienteAPI_Gaspar.csproj",
       "projectName": "ClienteAPI_Gaspar",
-      "projectPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\ClienteAPI_Gaspar\\ClienteAPI_Gaspar.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ClienteAPI_Gaspar\\ClienteAPI_Gaspar.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\ClienteAPI_Gaspar\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\ClienteAPI_Gaspar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

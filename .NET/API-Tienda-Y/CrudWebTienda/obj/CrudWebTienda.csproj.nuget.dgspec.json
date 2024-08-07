@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj": {}
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj": {
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
+        "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
         "projectName": "CrudWebTienda",
-        "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
+        "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\CrudWebTienda.csproj",
         "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\API-Tienda-Y\\CrudWebTienda\\obj\\",
+        "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\API-Tienda-Y\\CrudWebTienda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

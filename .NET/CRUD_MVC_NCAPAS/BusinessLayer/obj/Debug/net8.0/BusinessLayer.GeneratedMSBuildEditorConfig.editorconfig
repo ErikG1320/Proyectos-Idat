@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BusinessLayer
-build_property.ProjectDir = C:\Users\Dev Erik\desktop\Proyectos\.NET\CRUD_MVC_NCAPAS\BusinessLayer\
+build_property.ProjectDir = C:\Users\Dev Erik\Desktop\Proyectos-Idat\.NET\CRUD_MVC_NCAPAS\BusinessLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

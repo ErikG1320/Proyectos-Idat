@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\EVC2.NET\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\EVC2.NET\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\EVC2.NET\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

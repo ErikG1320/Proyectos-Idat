@@ -4559,11 +4559,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\Semana7.NET\\Semana7.NET.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\Semana7.NET\\Semana7.NET.csproj",
       "projectName": "Semana7.NET",
-      "projectPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\Semana7.NET\\Semana7.NET.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\Semana7.NET\\Semana7.NET.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\Semana7.NET\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\Semana7.NET\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

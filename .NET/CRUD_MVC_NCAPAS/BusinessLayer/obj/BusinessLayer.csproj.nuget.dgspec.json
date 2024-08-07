@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev Erik\\desktop\\Proyectos\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\CRUD_MVC_NCAPAS\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"

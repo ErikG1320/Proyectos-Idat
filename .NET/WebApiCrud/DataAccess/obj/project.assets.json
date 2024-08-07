@@ -566,11 +566,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\WebApiCrud\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\WebApiCrud\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Dev Erik\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Dev Erik\\Desktop\\Proyectos\\.NET\\WebApiCrud\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Dev Erik\\Desktop\\Proyectos-Idat\\.NET\\WebApiCrud\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dev Erik\\AppData\\Roaming\\NuGet\\NuGet.Config"
