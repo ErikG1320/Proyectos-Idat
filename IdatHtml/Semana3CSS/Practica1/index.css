@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilo del encabezado */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.item {
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

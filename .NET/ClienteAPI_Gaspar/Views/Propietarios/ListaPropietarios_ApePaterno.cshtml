@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "ListaPropietarios_ApePaterno";
+}
+<h2>Lista de propietarios</h2>
+<form action="post">
+    <label for="inicial">Inicial del propietario:</label>
+    <input type="text" id="inicial" name="inicial" required>
+    <button type="submit">Buscar</button>
+</form>
+
+@if (Model != null)
+{
+    <table class="table table-default">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Distrito</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var propietario in Model)
+            {
+                <tr>
+                    <td>@propietario.ID</td>
+                    <td>@propietario.DNI</td>
+                    <td>@propietario.Nombre</td>
+                    <td>@propietario.Distrito</td>
+                    <td>
+                        <a asp-action="ListaPapeletas_NOPagadas" asp-route-dni="@propietario.DNI">Ver Papeletas</a>
+                    </td>
+                </tr>
+                }
+                </tbody>
+            </table>
+        }

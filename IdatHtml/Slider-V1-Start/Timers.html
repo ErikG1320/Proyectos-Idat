@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="#" id="stop">Click para detener</a></p>
+    <div id="context">Default context</div>
+
+    <script>
+        let context=document.getElementById("context");
+        let text="<p> I love Javascript</p>";
+
+        let timer =setInterval(function() {
+            context.innerHTML+=text;
+        },1500);
+        
+        document.getElementById("stop").addEventListener("click", function() {
+            clearInterval(timer);
+        });
+
+        // Alternativa con arrow function
+        // document.getElementById("stop").addEventListener("click", () => {
+        //     clearInterval(timer);
+        // });
+    </script>
+</body>
+</html>

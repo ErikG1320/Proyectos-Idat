@@ -1,0 +1,26 @@
+Pasos cuando se clona un proyecto
+1.git init: Crea un nuevo repositorio local de Git. Este comando inicializa un directorio .git en un proyecto nuevo o existente.
+2.git clone: Descarga el código fuente desde un repositorio remoto. Por ejemplo, para clonar un repositorio remoto:
+git clone nombredeusuario@host:/ruta/al/repositorio
+3.git add: Agrega archivos al área de preparación. Por ejemplo, para indexar el archivo temp.txt:
+git add temp.txt
+
+4.git commit: Crea una instantánea de los cambios y los guarda en el directorio Git:
+git commit -m "Mensaje descriptivo del commit"
+
+5.git config: Establece configuraciones específicas de usuario, como el correo electrónico y el nombre de usuario:
+Configurar un correo global:
+git config --global user.email tuemail@ejemplo.com
+
+6.Configurar un correo local para un repositorio específico:
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+7.git status: Muestra la lista de archivos modificados y los que están por preparar o confirmar.
+8.git branch: Enumera las ramas disponibles. Las ramas son esenciales en Git.
+9.git checkout: Cambia entre ramas o versiones de archivos.
+10.git push: Sube tus cambios al repositorio remoto:
+11.git push origin nombre-de-la-rama
+
+12.git pull: Descarga los cambios del repositorio remoto al local:
+13.git pull origin nombre-de-la-rama

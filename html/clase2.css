@@ -1,0 +1,62 @@
+*{
+    color:rgb(255,255);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+.nav{
+
+    /* display:flex; */
+    justify-content:center;
+}
+nav a{
+    text-decoration: none;
+    text-align:center;
+    font-weight:500;
+    display:inline-block;
+    padding: 10px 20px;
+    font-size:20px;
+}
+body{
+    font-family: "Courier New";
+    margin: 0;
+    color: rgba(0, 0, 0, 0.742);
+    font-weight:400;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-image:url(Img/toro-zord.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Altura del viewport */
+    color:rgb(70,170,20);
+}
+h1{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    margin:50px auto;
+    padding:0 5px 3px 7px; /*superior derecha ,inferior izquierda */
+}
+p{
+    font-size:20px;
+    text-align:center;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.730);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}

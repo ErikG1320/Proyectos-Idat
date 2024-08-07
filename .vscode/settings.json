@@ -1,0 +1,15 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "dataworkspace.excludedProjects": [
+        "Trabajos/Trabajos.sqlproj"
+    ],
+    "dotnet.help.firstView": "gettingStarted",
+    "dotnet.implementType.insertionBehavior": "atTheEnd",
+    "dotnet.server.useOmnisharp": true,
+    "editor.fontSize": 15,
+    "java.project.sourcePaths": [
+        "Semana6/crudrapido/src/main/java/com/example/crudrapido"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página HTML con Efectos usando jQuery</title>
+    <style>
+        #titulo {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #parrafo {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        #imagen {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        #lista {
+            list-style-type: disc;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Efecto de desvanecimiento para mostrar y ocultar el párrafo
+            $("#botonDesvanecer").click(function(){
+                $("#parrafo").fadeToggle();
+            });
+
+            // Efecto de deslizar hacia arriba y hacia abajo la imagen
+            $("#botonDeslizar").click(function(){
+                $("#imagen").slideToggle();
+            });
+
+            // Efecto de resaltado para agregar un nuevo elemento a la lista
+            $("#botonAgregar").click(function(){
+                $("#lista").append("<li class='highlight'>Nuevo Elemento</li>");
+                $(".highlight").fadeIn(1000, function(){
+                    $(this).removeClass("highlight");
+                });
+            });
+
+            // Efecto de alternar el color de fondo del título
+            $("#botonAlternarColor").click(function(){
+                $("#titulo").toggleClass("highlight");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="titulo">Título de la Página</div>
+    <p id="parrafo">Este es un párrafo de ejemplo que se puede ocultar y mostrar.</p>
+    <img id="imagen" src="Cosmic-Fury.jpg" alt="Imagen de ejemplo">
+    <ul id="lista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <button id="botonDesvanecer">Ocultar/Mostrar Párrafo</button>
+    <button id="botonDeslizar">Deslizar Imagen</button>
+    <button id="botonAgregar">Agregar Elemento</button>
+    <button id="botonAlternarColor">Alternar Color Título</button>
+</body>
+</html>

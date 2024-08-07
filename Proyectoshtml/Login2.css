@@ -1,0 +1,185 @@
+:root{
+    --Green:hsl(162,45%,56%);
+    --Lead:hsl(162,2%,56%);
+    --Blue:hsl(220,85%,57%);
+    --Violet:hsl(272,92%,32%);
+    --Tex-White:hsl(0,0%,100%);
+    --Text--light-gray:hsl(0,0%,90%);
+    --body-bg-color:hsl(200,54%,12%);
+    --glass-bg-color:hsla(0,0%,100%,0.05);
+    --border-color:hsla(0,0%,100.0.25);
+    --blur:blur(10px);
+    --button-hover-color:hsla(0,0%,0%,0.3);
+}
+/*Hsl sirve para darle a los colores un poco de saturacion y luminosidad*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Courier New";
+    margin: 0;
+    background-color:var(--Blue);
+    color: var(--button-hover-color);
+    font-weight:400;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+body::after,
+body::before{
+    content: "";
+    position:fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity:0.5;
+}
+body::before{
+    background-color:var(--Blue);
+    left:0;
+    bottom:0;
+    transform: translate(-50%);
+}
+
+body::after{
+    background-color:var(--Violet);
+    right:0;
+    top:0;
+    transform:translate(50%);
+}
+a{
+    text-decoration: none;
+    text-align:center;
+    font-weight:500;
+    display:inline-block;
+}
+.form-main{
+    min-height:100vh;
+    padding:60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.form-content{
+    max-width: 450px;
+    position: relative;
+    z-index:1;
+    border-radius:50%;
+}
+.form-content .circle-1,
+.form-content .circle-2,
+.form-content .circle-3{
+    position: absolute;
+    background:linear-gradient(to right,var(--Tex-White),var(--button-hover-color));
+    border-radius:50%;
+    z-index:-1;
+}
+.form-content .circle-1{
+    height:120px;
+    width:120px;
+    left:0;
+    top:10%;
+    transform: translateX(-50%,-50%);
+}
+
+.form-content .circle-2{
+    height:80px;
+    width:80px;
+    right:0;
+    bottom:10%;
+    transform: translate(-50%);
+}
+.form-content .circle-3{
+    height:80px;
+    width:80px;
+    right:0;
+    top:10%;
+    background-color: red;
+}
+.form-content .box{
+    border-color:var(--glass-bg-color);
+    border: 1px solid var(--border-color);
+    padding:40px 50px;
+    border-radius: 20px;
+    backdrop-filter:var(--blur);
+}
+.form-content h3{
+    font-size:28px;
+    text-align:center;
+    line-height: 1.2;
+    color:var(--Tex-White);
+    font-weight: 500;
+}
+.form-content form{
+    margin:25px 0 20px;
+}
+
+.form-content .input-box{
+    margin-bottom: 25px;
+}
+.form-content::placeholder{
+    opacity:0.5;
+}
+.form-content .input-control{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    border:none;
+    color: inherit;
+    font-weight:inherit;
+    font-family:inherit;
+    font-size:16px;
+}
+.form-content .input-control:focus{
+    outline:none;
+}
+.form-content .input-link{
+    margin-top:10px;
+    text-align:center;
+}
+.form-content .btn{
+    height:40px;
+    width:100%;
+    font-size:16px;
+    font-weight:500;
+    text-transform:capitalize;
+    font-family:inherit;
+    cursor: pointer;
+    border-radius:25px;
+    user-select:none;
+    background:linear-gradient(to right,var(--Green),var(--Lead));
+    border:none;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+}
+-form-content .btn::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: background-color 0.5s ease;
+    z-index: -1;
+}
+.form-content .btn:hover::before{
+    background-color: var(--button-hover-color);
+}
+.form-content p{
+    font-size:16px;
+    color:chartreuse;
+    text-align:center;
+    line-height: 1.2;
+    font-weight: 400;
+}

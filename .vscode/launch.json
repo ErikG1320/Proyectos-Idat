@@ -1,0 +1,127 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ProyectofinalApplication",
+            "request": "launch",
+            "mainClass": "com.spring.proyectofinal.ProyectofinalApplication",
+            "projectName": "proyectofinal"
+        },
+        {
+            "type": "java",
+            "name": "Proyecto",
+            "request": "launch",
+            "mainClass": "com.Proyectosjava.Proyecto",
+            "projectName": "Proyecto"
+        },
+        {
+            "type": "java",
+            "name": "Crud",
+            "request": "launch",
+            "mainClass": "com.Proyectosjava.Crud",
+            "projectName": "Proyecto"
+        },
+        {
+            "type": "java",
+            "name": "UniversidadApplication",
+            "request": "launch",
+            "mainClass": "com.login.universidad.UniversidadApplication",
+            "projectName": "universidad"
+        },
+        {
+            "type": "java",
+            "name": "PracticaApplication",
+            "request": "launch",
+            "mainClass": "com.crud.practica.PracticaApplication",
+            "projectName": "practica"
+        },
+        {
+            "type": "java",
+            "name": "CrudApplication",
+            "request": "launch",
+            "mainClass": "com.crud.crud.CrudApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "CrudApplication",
+            "request": "launch",
+            "mainClass": "com.app.crud.crud.CrudApplication",
+            "projectName": "crud"
+        },
+        {
+            "type": "java",
+            "name": "Crud6Application",
+            "request": "launch",
+            "mainClass": "idat.edu.pe.crud6.Crud6Application",
+            "projectName": "crud6"
+        },
+        {
+            "type": "java",
+            "name": "ProyectoaApplication",
+            "request": "launch",
+            "mainClass": "idat.edu.pe.proyectoa.ProyectoaApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Evc1Application",
+            "request": "launch",
+            "mainClass": "com.idat.evc1.Evc1Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Evc1Application",
+            "request": "launch",
+            "mainClass": "com.idat.evc1.Evc1Application",
+            "projectName": "evc1"
+        },
+        {
+            "type": "java",
+            "name": "ProyectoaApplication",
+            "request": "launch",
+            "mainClass": "idat.edu.pe.proyectoa.ProyectoaApplication",
+            "projectName": "proyectoa"
+        },
+        {
+            "type": "java",
+            "name": "Proyecto7Application",
+            "request": "launch",
+            "mainClass": "idat.edu.pe.proyecto7.Proyecto7Application",
+            "projectName": "proyecto7"
+        },
+        {
+            "type": "java",
+            "name": "FormularioAlumno",
+            "request": "launch",
+            "mainClass": "com.Proyectosjava.FormularioAlumno",
+            "projectName": "Proyecto"
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "idat.com.demo.DemoApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo"
+        }
+    ]
+}

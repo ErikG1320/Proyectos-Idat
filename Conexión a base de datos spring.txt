@@ -1,0 +1,22 @@
+Conexión a base de datos spring boot:
+MySQL:
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+spring.datasource.username=your_user
+spring.datasource.password=your_password
+
+PostgreSQL:
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
+spring.datasource.username=your_user
+spring.datasource.password=your_password
+
+Oracle:
+spring.datasource.url=jdbc:oracle://localhost:1521/your_database
+spring.datasource.username=your_user
+spring.datasource.password=your_password
+
+SQL Server
+spring.datasource.url=jdbc:sqlserver://localhost:1433/your_database
+spring.datasource.username=your_user
+spring.datasource.password=your_password
+
+

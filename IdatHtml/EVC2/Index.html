@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi Aplicación</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aplicación de Peaje</h1>
+        <div class="section">
+            <h2>Registro de Vehículos</h2>
+            <form id="vehicleForm">
+                <label for="placa">Matrícula del Vehículo:</label>
+                <input type="text" id="placa" required>
+                <label for="type">Tipo de Vehículo:</label>
+                <select id="type" required>
+                    <option value="automovil">Automóvil</option>
+                    <option value="motocicleta">Motocicleta</option>
+                    <option value="camion">Camión</option>
+                </select>
+                <button type="submit">Registrar</button>
+            </form>
+            <p id="amount"></p>
+        </div>
+        <div class="section">
+            <h2>Tarifas del Peaje</h2>
+            <p>Automóvil: 6.60</p>
+            <p>Motocicleta: 4.50</p>
+            <p>Camión: 12.60</p>
+        </div>
+        <div class="section">
+            <h2>Resumen de Ingresos</h2>
+            <p id="totalVehicles">Total de vehículos registrados:</p>
+            <p id="totalIncome">Total de ingresos generados:</p>
+        </div>
+    </div>
+    <script src="Index.js"></script>
+</body>
+
+</html>

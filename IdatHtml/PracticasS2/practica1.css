@@ -1,0 +1,45 @@
+.div{
+    /* background-color: aqua; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+}
+section.div{
+    /* background-color:cyan; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+}
+h1{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+*{
+    /* background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/39dcbfbc-dfec-4e62-b669-084a68a59c2b/d6tjxat-f9c9d9a0-2ed7-46d0-aad2-c4188a1a4261.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM5ZGNiZmJjLWRmZWMtNGU2Mi1iNjY5LTA4NGE2OGE1OWMyYlwvZDZ0anhhdC1mOWM5ZDlhMC0yZWQ3LTQ2ZDAtYWFkMi1jNDE4OGExYTQyNjEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iuWhdlv6zJWMam0CMA9ywr1YmiMGlY8yYM7i26no2SM); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+}
+p, h2 {
+    text-shadow: 2px 2px 4px #000000; /* horizontal-offset vertical-offset blur-radius color */
+}
+.articulo1{
+    background-image: url(https://th.bing.com/th/id/R.63690a8abfcc07f4be39bf621a33f342?rik=RX2dlRRPOSiagQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-dZZ5_jMasUY%2fTgExFEnQZsI%2fAAAAAAAAAIg%2fOuqYz4CirF0%2fs1600%2fnaturaleza1.jpg&ehk=6PdD4a%2bLlQu0%2flXaAu%2b8y0IMCAiOFoNmLQjJDGuSZYE%3d&risl=&pid=ImgRaw&r=0);
+    background-repeat:repeat-X;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    margin: 0 0 0 20px;
+}
+.articulo2{
+    margin:20px;
+    background-image: url(https://i0.wp.com/medioambienteynaturaleza.com/wp-content/uploads/2015/08/Fondos-de-pantalla-de-naturaleza-ac.jpg?ssl=1);
+    background-repeat:repeat-y;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+}

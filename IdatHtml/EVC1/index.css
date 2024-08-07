@@ -1,0 +1,146 @@
+/* Estilo para la barra de navegación */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none; /* Elimina los estilos de lista predeterminados */
+    padding-left: 0; /* Elimina el relleno predeterminado en listas */
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+.nav-item {
+    margin: 0 10px;
+    display: block; /* Asegura que los enlaces ocupen el espacio adecuado */
+    text-align: center; /* Centra el texto dentro de los enlaces */
+}
+
+/* Estilo para la marca de la barra de navegación */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block; /* Asegura que la marca esté en línea con otros elementos */
+    margin-right: 20px; /* Espacio a la derecha de la marca */
+}
+
+/* Estilo para el contenedor de párrafos */
+.contenedor-parrafos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 70px;
+}
+
+/* Estilo para los párrafos */
+.parrafo{
+    font-weight: 700;
+    text-align: center;
+    margin: 0 15px; /* Espacio horizontal entre los párrafos */
+}
+
+/* Estilo para el encabezado */
+header{
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: aqua;
+    padding: 30px 0; /* Espaciado vertical */
+}
+.fundamentos{
+    background-color: magenta;
+    display:flex;
+    align-items: center;
+}
+.cod{
+    width:200px;
+    height:200px;
+    margin:10px 0 10px 130px;
+}
+.parrafo1{
+    font-weight: 700;
+    text-align: center;
+    padding:15px;
+    margin: 10px 15px; /* Espacio horizontal entre los párrafos */
+    align-items:center;
+}
+.carreras1{
+    background-color:chartreuse;
+    display:flex;
+    flex-direction: row;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    width:100%;
+    height:auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.card-text{
+    text-align: center;
+}
+
+/* .card {
+    width: 400px;
+    margin: 10px;
+} */
+
+/* .card img{ */
+    /* width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex; */
+
+.card-body {
+    text-align:center;
+    background-color: aliceblue;
+}
+
+
+.carreras2 {
+    background-color: rgb(187, 140, 240);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .container-1,
+  .container-2,
+  .container-3,
+  .container-4,
+  .container-5,
+  .container-6,
+  .container-7 {
+    width: 300px; 
+    margin: 30px;
+  }
+
+  .card {
+    width: 100%; 
+    margin: 20px;
+  }
+
+  .card-img-top {
+    width: calc(100% - 40px); /* El ancho de la imagen es el 100% del ancho de la tarjeta menos el espacio del margen */
+    height: auto;
+    margin: 20px; /* Margen alrededor de la imagen */
+  }
+
+  @media (max-width: 991.98px){
+    .navbar-nav{
+        flex-direction: column;
+    }
+    .nav-item{
+        text-align:center;
+    }
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}

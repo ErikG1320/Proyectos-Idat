@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Cuadro con jQuery</title>
+    <style>
+        #cuadro {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("#cuadro").animate({
+                    left: '80%'
+                }, {
+                    duration: 5000,
+                    step: function(now, fx) {
+                        if (fx.prop === "left") {
+                            var percentage = now / $(window).width();
+                            var newColor = calculateColor(percentage);
+                            $("#cuadro").css("background-color", newColor);
+                        }
+                    }
+                });
+            });
+
+            function calculateColor(percentage) {
+                // Define the color stops
+                var colors = [
+                    { r: 255, g: 0, b: 0 },    // Red
+                    { r: 255, g: 165, b: 0 },  // Orange
+                    { r: 255, g: 255, b: 0 },  // Yellow
+                    { r: 0, g: 128, b: 0 },    // Green
+                    { r: 0, g: 0, b: 255 },    // Blue
+                    { r: 75, g: 0, b: 130 },   // Indigo
+                    { r: 238, g: 130, b: 238 } // Violet
+                ];
+
+                // Calculate which colors to interpolate between
+                var index = Math.floor(percentage * (colors.length - 1));
+                var startColor = colors[index];
+                var endColor = colors[index + 1];
+                var mix = (percentage * (colors.length - 1)) - index;
+
+                // Interpolate between the start and end colors
+                var r = Math.round(startColor.r + (endColor.r - startColor.r) * mix);
+                var g = Math.round(startColor.g + (endColor.g - startColor.g) * mix);
+                var b = Math.round(startColor.b + (endColor.b - startColor.b) * mix);
+
+                return `rgb(${r}, ${g}, ${b})`;
+            }
+        });
+    </script>
+</head>
+<body>
+    <button id="boton">Iniciar Animación</button>
+    <div id="cuadro"></div>
+</body>
+</html>

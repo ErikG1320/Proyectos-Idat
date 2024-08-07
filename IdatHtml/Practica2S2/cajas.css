@@ -1,0 +1,79 @@
+body {
+    background-color: #f0f8ff; /* Un suave color azul claro para el fondo de la página */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #2f4f4f; /* Un tono oscuro de verde azulado para el texto */
+}
+
+.primary img {
+    background-size: cover;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px 20px 10px 20px;
+    border: 1px solid #8fbc8f; /* Verde claro para el borde */
+}
+
+.secondary {
+    font-size: 17px;
+    border: 1px solid #8fbc8f; /* Verde claro para el borde */
+    width: 350px;
+    height: 200px;
+    background-color: #ffffff; /* Blanco para el fondo del contenedor secundario */
+    float: right;
+    margin: 10px 20px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #2f4f4f; /* Un tono oscuro de verde azulado para el texto */
+}
+
+.terciario {
+    border: 1px solid #8fbc8f; /* Verde claro para el borde */
+    width: 550px;
+    height: 150px;
+    margin: 20px auto;
+    background-color: #ffffff; /* Blanco para el fondo del contenedor terciario */
+    text-align: center;
+    clear: both;
+    color: #2f4f4f; /* Un tono oscuro de verde azulado para el texto */
+}
+
+.cuarto img {
+    background-size: cover;
+    margin: 10px 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid #8fbc8f; /* Verde claro para el borde */
+    display: block;
+}
+.quinto{
+    border: 1px solid #8fbc8f; /* Verde claro para el borde */
+    width: 350px;
+    height: 200px;
+    background-color: #ffffff; /* Blanco para el fondo del contenedor cuarto */
+    float: left;
+    margin: 10px 20px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #2f4f4f; /* Un tono oscuro de verde azulado para el texto */
+}
+.contenedor {
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+    background-color: #faf0e6; /* Un tono claro de beige para el fondo del contenedor */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de elevación */
+}

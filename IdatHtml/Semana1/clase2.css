@@ -1,0 +1,32 @@
+.articulo{
+    background-color: rgb(255,153,96);
+    width: 500px;
+    height: 250px;
+}
+.primary{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+#import{
+    font-weight: bold;
+    font-style: italic;
+    color:red
+}
+head{
+    background-color: rgb(24, 8, 150);
+    width: 700px;
+    height: 150px;
+    color: aquamarine;
+}
+div{
+    background-color: rgb(17, 141, 183);
+    width: 700px;
+    height: 150px;
+    color: rgb(52, 184, 23);
+}
+nav h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: blue;
+}

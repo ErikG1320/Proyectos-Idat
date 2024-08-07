@@ -1,0 +1,28 @@
+Comandos para usar en git
+Configuración global (para todos los proyectos): Abre una terminal de Git y ejecuta los siguientes comandos, reemplazando "Tu nombre" y 
+"tuemail@tudominio.com" con tu información:
+
+git config --global user.name "Tu nombre"
+git config --global user.email "tuemail@tudominio.com"
+
+2.Configuración particular del proyecto: Si deseas configurar un nombre de usuario y correo electrónico específico para un proyecto en particular, sigue estos pasos:
+Ve al repositorio del proyecto en la terminal.
+Ejecuta los siguientes comandos, reemplazando "nombre de usuario" y "usuario@gmail.com" con la información adecuada:
+
+git config user.name "nombre de usuario"
+git config user.email usuario@gmail.com
+
+3.Añade Camibios y los prepara para stage
+ 
+git add .
+
+4.Agrega un commit y mensaje de información
+
+git commit -m "Agregué nuevas funcionalidades"
+
+5.PUsh a la rama integrada
+
+git push origin master
+
+
+

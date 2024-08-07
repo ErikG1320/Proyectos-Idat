@@ -1,0 +1,16 @@
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\bin\Debug\net8.0\BusinessLayer.deps.json
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\bin\Debug\net8.0\BusinessLayer.dll
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\bin\Debug\net8.0\BusinessLayer.pdb
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\bin\Debug\net8.0\DataAccess.dll
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.sourcelink.json
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\Business.EA331CBA.Up2Date
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.dll
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
+C:\Users\gerik\Escritorio\Proyectos\EVC2.NET\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll

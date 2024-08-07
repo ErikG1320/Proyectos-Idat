@@ -1,0 +1,21 @@
+.box{
+    width:100px;
+    height:100px;
+    background:red;
+    margin:10px;
+}
+body{
+    margin:0;
+}
+.box-default{
+    box-sizing:border-box;
+    padding:25px;
+    border:10px solid black;
+    width:30px;
+    height:30px;
+}
+.box-new{
+    box-sizing:border-box;
+    padding:25px;
+    border:10px solid black;
+}

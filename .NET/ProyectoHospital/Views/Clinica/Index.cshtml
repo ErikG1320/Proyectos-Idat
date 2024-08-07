@@ -1,0 +1,33 @@
+@model IEnumerable<ProyectoHospital.Models.Cita>
+
+@{
+    ViewData["Title"] = "Citas Index";
+}
+
+<h2>Citas Index</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre del Paciente</th>
+            <th>Nombre del Doctor</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CitaID">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.CitaID">Eliminar</a>
+                <a asp-action="Details" asp-route-id="@item.CitaID">Detalles</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<a href="@Url.Action("Create")">Crear Nueva Cita</a>

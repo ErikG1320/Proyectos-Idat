@@ -1,0 +1,43 @@
+.padre{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background:chartreuse;
+    display:flex;
+    flex-direction: row;
+    flex-direction:wrap;
+    justify-content: center;
+}
+.padre div{
+    height: 150px;
+    background-color: blue;
+    margin: 5px;
+}
+.uno{
+    flex:1;
+    /* width:200px; */
+    /* flex-basis: 200px; */
+    transition: all 1s ease-in-out;
+}
+.uno:hover{
+    /* transform: scale(1.1); */
+    transform: rotate(15deg);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+@keyframes animados{
+    0%{
+        background: red;
+    }
+    50%{
+        background: yellow;
+    }
+    100%{
+        background: cadetblue;
+    }
+}
+.dos{
+    flex:1;
+    /* width: 200px; */
+    flex-basis: 300px;
+    animation:animados 2s linear infinite alternate;
+}

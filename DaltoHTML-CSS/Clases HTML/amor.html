@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://cdn.pixabay.com/photo/2017/01/25/19/56/rose-2008935_960_720.jpg');
+            background-size: cover;
+            background-position: center;
+            color:palevioletred;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #heart {
+            font-size: 80px;
+            cursor: pointer;
+            user-select: none;
+            animation: pulse 1s infinite;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5); /* Cambiando la sombra del texto a una más clara */
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="heart">❤</div>
+    <div id="message">Eres mi sol en días nublados, mi alegría en la tristeza, mi razón de ser. Te amo con todo mi corazón.</div>
+
+    <script>
+        var heart = document.getElementById('heart');
+        var message = document.getElementById('message');
+        var clickCount = 0;
+
+        heart.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount === 1) {
+                message.innerHTML = "Tu amor ilumina mi vida como el sol ilumina el día. Eres mi mayor bendición.";
+                message.style.display = 'block';
+            }
+            if (clickCount === 2) {
+                message.innerHTML = "Cada momento contigo es un tesoro que atesoro en mi corazón. Gracias por existir.";
+            }
+            if (clickCount === 3) {
+                document.body.style.backgroundImage = "url('https://cdn.pixabay.com/photo/2017/01/25/19/56/rose-2008935_960_720.jpg')";
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundPosition = "center";
+                message.innerHTML = "Contigo, cada día es una nueva aventura llena de amor y alegría.";
+            }
+            if (clickCount === 4) {
+                message.innerHTML = "Juntos somos más fuertes. Gracias por ser mi roca en tiempos difíciles.";
+            }
+            if (clickCount === 5) {
+                message.innerHTML = "Eres mi inspiración, mi motivación, mi todo. Te amo más de lo que las palabras pueden expresar.";
+            }
+            if (clickCount === 6) {
+                message.innerHTML = "Cada día a tu lado es un regalo del cielo. Te amo más de lo que puedo decir.";
+            }
+            if (clickCount === 7) {
+                message.innerHTML = "Eres mi sueño hecho realidad, mi amor eterno. No puedo imaginar la vida sin ti.";
+            }
+            if (clickCount === 8) {
+                message.innerHTML = "Juntos, construiremos un futuro lleno de amor, risas y sueños realizados.";
+            }
+            if (clickCount === 9) {
+                alert("Caminemos juntos hacia un futuro lleno de amor y felicidad.");
+            }
+            if (clickCount === 10) {
+                message.innerHTML = "Eres el bucle infinito de mi vida, cada vez que pienso en ti, mi corazón itera el amor más profundo.";
+            }
+            if (clickCount === 11) {
+                message.innerHTML = "Si fueras un algoritmo, serías O(n log n), porque tu amor es eficiente y siempre creciente.";
+            }
+            if (clickCount === 12) {
+                message.innerHTML = "Eres el html que estructura mi corazón ,el CSS que colorea mi mundo ,y el Javascript que da movimiento a nuestra historia de amor.";
+            }
+            if (clickCount === 13) {
+                message.innerHTML = "Eres mi corazón, mi alma, mi vida, mi pasión. Te amo con todo mi corazón.";
+            }
+            if (clickCount === 14) {
+                message.innerHTML = "Si nuestro amor fuera una base de datos seria SQL porque lo que siento por ti jamas se rompera.";
+            }
+            if (clickCount === 15) {
+                message.innerHTML = "Mi vida sin ti seria una web sin CSS y no habria razon para existir";
+            }
+            if (clickCount === 16) {
+                message.innerHTML = "Tu eres el Backend de mi Frontend.";
+            }
+        });
+    </script>
+</body>
+</html>

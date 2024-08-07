@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVC_EF_SP.props" />
+</Project>

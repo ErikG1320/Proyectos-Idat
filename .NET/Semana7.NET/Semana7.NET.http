@@ -1,0 +1,6 @@
+@Semana7.NET_HostAddress = http://localhost:5204
+
+GET {{Semana7.NET_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

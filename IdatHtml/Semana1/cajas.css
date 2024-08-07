@@ -1,0 +1,27 @@
+.contenedor{
+    margin: auto;
+    width: 900px;
+    height: 800px;
+    background-color: white;
+}
+.info1{
+    width: 60%;
+    height: 400px;
+    background-color: blueviolet;
+    float: left;
+}
+
+.info2{
+    width: 40%;
+    height: 400px;
+    background-color: rgb(53, 11, 158);
+    float: right;
+}
+
+.info3{
+    width: 80%;
+    height: 400px;
+    background-color: rgb(40, 199, 72);
+    /* float: right; */
+    clear: both; /*rompe el esquema del float*/
+}

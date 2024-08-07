@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: montserrat;
+    background:linear-gradient(150deg,#6c3483,#58d68d);
+    height: 100vh;
+}
+.formulario{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+}
+
+.formulario h1{
+    text-align: center;
+    padding: 10px 10px;
+    border:1px solid rgba(0,0,0,0.5);
+    box-shadow:2px 2px 10px chartreuse;
+    color:blue;
+    bottom: auto;
+}
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.username input{
+    width:100%;
+    padding: 0 5px;
+    height:40px;
+    font-size:16px;
+    border:none;
+    background:none;
+    outline:none;
+}
+
+.username label{
+    position: relative;
+    top: 50%;
+    left: 5px;
+    color:black;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+.password input{
+    width:100%;
+    padding: 0 5px;
+    height:40px;
+    font-size:16px;
+    border:none;
+    background:none;
+    outline:none;
+}
+.password label{
+    position: relative;
+    top: 50%;
+    left: 5px;
+    color:black;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+.buttons{
+    text-align: center;
+}
+.enlaces {
+    text-align: center;
+    color:red;
+}
+

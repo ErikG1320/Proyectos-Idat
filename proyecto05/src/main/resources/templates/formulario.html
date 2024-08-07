@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro estudiantil</h1>
+    <form method="post" th:action="@{/registrar}" th:object="${estudiante}">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese su nombre" th:field="*{nombre}" required>
+        <label for="apellido">Apellido</label>
+        <input type="text" placeholder="Ingresa tu Apellido" th:field="*{apellido}">
+        <input type="number" placeholder="Ingresa tu nota1" th:field="*{nota1}">
+        <input type="number" placeholder="Ingresa tu nota2" th:field="*{nota2}">
+        <input type="submit" value="Enviar">
+    </form>
+    <h2>Reporte</h2>
+    <span th:text="${b_nombre}"></span><br>
+    <span th:text="${b_apellido}"></span><br>
+    <span th:text="${b_nota1}"></span><br>
+    <span th:text="${b_nota2}"></span><br>
+    <span th:text="${b_promedio}"></span><br>
+    <span th:text="${b_condicion}"></span><br>
+</body>
+</html>
