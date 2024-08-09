@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "JavaApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.JavaApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "ProyectofinalApplication",
             "request": "launch",
             "mainClass": "com.spring.proyectofinal.ProyectofinalApplication",
