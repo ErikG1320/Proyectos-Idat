@@ -2,14 +2,15 @@ package com.example.demo.Entity;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 @Table(name = "tienda_virtual_de_micas")
@@ -19,7 +20,6 @@ public class TiendaProductos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    
     @Size(min = 2, max = 50)
     private String nombre;
 
@@ -44,7 +44,6 @@ public class TiendaProductos {
     private boolean activo;
 
     // Nuevos campos
-    
     @Size(max = 50)
     private String nombreModelo;
 
@@ -197,7 +196,7 @@ public class TiendaProductos {
     // Sobrescribe el método toString
     @Override
     public String toString() {
-        return "Tienda{" +
+        return "TiendaProductos{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", direccion='" + direccion + '\'' +
@@ -220,13 +219,19 @@ public class TiendaProductos {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TiendaProductos tienda = (TiendaProductos) o;
+        TiendaProductos productos = (TiendaProductos) o;
 
-        return id != null ? id.equals(tienda.id) : tienda.id == null;
+        return id != null ? id.equals(productos.id) : productos.id == null;
     }
 
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
+    }
+    public static TiendaProductos registerproduct(TiendaProductos usuario) {
+        // Implementa el método para registrar la tienda, incluyendo encriptar la contraseña
+        usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
+        // Guarda el producto en la base de datos (asegúrate de tener el repositorio para esto)
+        return usuario;
     }
 }
