@@ -10,8 +10,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 @Entity
 @Table(name = "tienda_virtual_de_micas")
 public class TiendaProductos {
@@ -24,7 +22,20 @@ public class TiendaProductos {
     private String nombre;
 
     @Size(min = 8, max = 100)
-    private String password;
+    private String contraseña;
+    @Size(max = 50)
+    private String TipoMica;
+    @Size(max = 50)
+    private String nombreModelo;
+    @Size(max = 255)
+    private String descripcion;
+
+    private double precio;
+
+    private int cantidadEnStock;
+
+    @Size(max = 100)
+    private String fabricante;
 
     @Size(max = 100)
     private String direccion;
@@ -36,48 +47,46 @@ public class TiendaProductos {
     @Size(max = 15)
     private String telefono;
 
-    @Size(max = 255)
-    private String descripcion;
-
-    private LocalDate fechaCreacion;
+    private LocalDate fecha;
 
     private boolean activo;
 
-    // Nuevos campos
+    // Nuevo campo para rol
     @Size(max = 50)
-    private String nombreModelo;
-
-    @Size(max = 50)
-    private String tipoMica;
-
-    private double precio;
-
-    private int cantidadEnStock;
-
-    @Size(max = 100)
-    private String fabricante;
+    private String rol;
 
     // Constructor sin parámetros (requerido por JPA)
     public TiendaProductos() {
-        this.fechaCreacion = LocalDate.now();
+        this.fecha = LocalDate.now();
         this.activo = true;
     }
+    
+
+    public TiendaProductos(@Size(min = 2, max = 50) String nombre, @Size(min = 8, max = 100) String password) {
+        this.nombre = nombre;
+        this.contraseña = password;
+    }
+
 
     // Constructor con parámetros
-    public TiendaProductos(String nombre, String password, String direccion, String email, String telefono, String descripcion, String nombreModelo, String tipoMica, double precio, int cantidadEnStock, String fabricante) {
-        this.nombre = nombre;
-        this.password = password;
-        this.direccion = direccion;
-        this.email = email;
-        this.telefono = telefono;
-        this.descripcion = descripcion;
-        this.fechaCreacion = LocalDate.now();
-        this.activo = true;
+    public TiendaProductos(Long id, @Size(min = 2, max = 50) String nombre, @Size(min = 8, max = 100) String password,
+            @Size(max = 50) String tipoMica, @Size(max = 50) String nombreModelo, @Size(max = 255) String descripcion,
+            double precio, int cantidadEnStock, @Size(max = 100) String fabricante, @Size(max = 100) String direccion,
+            @Email @Size(max = 50) String email, @Size(max = 15) String telefono, LocalDate fechaCreacion,
+            boolean activo, @Size(max = 50) String rol) {
+        this.id = id;
+        TipoMica = tipoMica;
         this.nombreModelo = nombreModelo;
-        this.tipoMica = tipoMica;
+        this.descripcion = descripcion;
         this.precio = precio;
         this.cantidadEnStock = cantidadEnStock;
         this.fabricante = fabricante;
+        this.direccion = direccion;
+        this.email = email;
+        this.telefono = telefono;
+        this.fecha = fechaCreacion;
+        this.activo = activo;
+        this.rol = rol;
     }
 
     // Getters y Setters
@@ -98,11 +107,11 @@ public class TiendaProductos {
     }
 
     public String getPassword() {
-        return password;
+        return contraseña;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.contraseña = password;
     }
 
     public String getDireccion() {
@@ -137,12 +146,12 @@ public class TiendaProductos {
         this.descripcion = descripcion;
     }
 
-    public LocalDate getFechaCreacion() {
-        return fechaCreacion;
+    public LocalDate getFecha() {
+        return fecha;
     }
 
-    public void setFechaCreacion(LocalDate fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
+    public void setFechaCreacion(LocalDate fecha) {
+        this.fecha = fecha;
     }
 
     public boolean isActivo() {
@@ -151,6 +160,14 @@ public class TiendaProductos {
 
     public void setActivo(boolean activo) {
         this.activo = activo;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     public String getNombreModelo() {
@@ -162,11 +179,11 @@ public class TiendaProductos {
     }
 
     public String getTipoMica() {
-        return tipoMica;
+        return TipoMica;
     }
 
     public void setTipoMica(String tipoMica) {
-        this.tipoMica = tipoMica;
+        this.TipoMica = tipoMica;
     }
 
     public double getPrecio() {
@@ -203,10 +220,11 @@ public class TiendaProductos {
                 ", email='" + email + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", fechaCreacion=" + fechaCreacion +
+                ", fecha=" + fecha +
                 ", activo=" + activo +
+                ", rol='" + rol + '\'' + // Añadir rol en toString
                 ", nombreModelo='" + nombreModelo + '\'' +
-                ", tipoMica='" + tipoMica + '\'' +
+                ", tipoMica='" + TipoMica + '\'' +
                 ", precio=" + precio +
                 ", cantidadEnStock=" + cantidadEnStock +
                 ", fabricante='" + fabricante + '\'' +
@@ -228,10 +246,10 @@ public class TiendaProductos {
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
     }
-    public static TiendaProductos registerproduct(TiendaProductos usuario) {
-        // Implementa el método para registrar la tienda, incluyendo encriptar la contraseña
-        usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
-        // Guarda el producto en la base de datos (asegúrate de tener el repositorio para esto)
-        return usuario;
+
+    // public static TiendaProductos registerproduct(TiendaProductos usuario) {
+    //     // Implementa el método para registrar la tienda, incluyendo encriptar la contraseña
+    //     usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
+    //     // Guarda el producto en la base de datos (asegúrate de tener el repositorio para esto)
+    //     return usuario;
     }
-}

@@ -7,11 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.Entity.TiendaProductos;
 import com.example.demo.Service.TiendaServicio;
 
 @Controller
+@RequestMapping("/users")
 public class InicioController {
 
     @Autowired
@@ -32,7 +35,7 @@ public class InicioController {
     }
 
     @PostMapping("/register")
-    public String registerTienda(@ModelAttribute TiendaProductos usuario, Model model) {
+    public String registerTienda(@RequestBody @ModelAttribute TiendaProductos usuario, Model model) {
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         tiendaServicio.save(usuario); // Asegúrate de tener un método para guardar la tienda en el servicio
         model.addAttribute("message", "Usuario registrado exitosamente!");
@@ -40,7 +43,7 @@ public class InicioController {
     }
 
     @PostMapping("/login")
-    public String loginTienda(@ModelAttribute TiendaProductos usuario, Model model) {
+    public String loginTienda(@RequestBody @ModelAttribute TiendaProductos usuario, Model model) {
         TiendaProductos storedProducto = tiendaServicio.findByNombre(usuario.getNombre());
         if (storedProducto != null && passwordEncoder.matches(usuario.getPassword(), storedProducto.getPassword())) {
             model.addAttribute("message", "Inicio de sesión exitoso!");
@@ -49,6 +52,10 @@ public class InicioController {
             model.addAttribute("error", "Correo o contraseña incorrectos.");
             return "login"; // Mantente en la página de login en caso de error
         }
+    }
+
+    public boolean checkPassword(String rawPassword, String encodedPassword) {
+        return passwordEncoder.matches(rawPassword, encodedPassword);
     }
 
     @GetMapping("/home")

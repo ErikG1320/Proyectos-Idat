@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,26 @@
         <thead class="thead-light">
             <tr>
                 <th>#</th>
+                <th>Nombre modelo</th>
+                <th>Tipo de mica</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Fabricante</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Fecha de venta</th>
+                <th>Acciónes</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="">
             <tr>
+                <h1>Barra de Búsqueda</h1>
+                <form action="./Busqueda" method="get">
+                    <input type="text" name="busqueda" placeholder="Buscar productos...">
+                    <button type="submit">Buscar</button>
+                </form>
                 <td></td>
             </tr>
         </tbody>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns="http:thymeleaf.org">
+<html lang="es" xmlns="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,6 @@
     <style>
         body {
             background-color: #f8f9fa;
-            display: grid;
         }
 
         .category {
@@ -26,17 +25,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             overflow: hidden;
-            /* Evita que el contenido se desborde fuera del borde redondeado */
         }
 
         .card img {
             width: 100%;
             height: 200px;
-            /* Establece una altura fija para las imágenes */
-            object-fit: contain;
-            /* Ajusta la imagen para que se mantenga dentro del contenedor sin recortarse */
+            object-fit: cover;
             background-color: #fff;
-            /* Añade un fondo blanco para que el espacio vacío se vea limpio */
         }
     </style>
     <title>Catálogo de Micas</title>
@@ -48,23 +43,21 @@
         <div class="category">
             <h2>Micas de Vidrio Templado</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card">
-                        <img src="./img/Mica Transparente.jpg" class="card-img-top" alt="Mica Vidrio 1">
+                        <img src="./img/Mica Transparente.jpg" alt="Mica Transparente">
                         <div class="card-body">
-                            <h5 class="card-title">Mica de Vidrio templado transparente proteccion basica</h5>
-                            <p class="card-text">Protección minima con resistencia a golpes y arañazos.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <h5 class="card-title">Mica de Vidrio Templado Transparente</h5>
+                            <p class="card-text">Protección básica con resistencia a golpes y arañazos.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card">
-                        <img src="./img/Mica Templado.jpg" class="card-img-top" alt="Mica Vidrio 2">
+                        <img src="./img/Mica Templado.jpg" alt="Mica Vidrio">
                         <div class="card-body">
-                            <h5 class="card-title">Mica de Vidrio Templado de capa reforzada</h5>
-                            <p class="card-text">Claridad excepcional y bordes reforzados para mejor proteccion.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <h5 class="card-title">Mica de Vidrio Templado</h5>
+                            <p class="card-text">Protección completa con resistencia a golpes y arañazos.</p>
                         </div>
                     </div>
                 </div>
@@ -72,36 +65,34 @@
         </div>
         <div class="category">
             <h2>Micas de Cerámica</h2>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="./img/Mate Ceramico.webp" class="card-img-top" alt="Mica Vidrio 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Mica de Vidrio Mate Ceramica para proteccion avanzada </h5>
-                        <p class="card-text">Protección completa y antihuellas y antigrasa.</p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="./img/MateCeramico.webp" alt="Mica Mate Cerámica">
+                        <div class="card-body">
+                            <h5 class="card-title">Mica de Vidrio Mate Cerámica</h5>
+                            <p class="card-text">Protección completa y antihuellas con acabado mate.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card">
-                        <img src="./img/Ceramica Antiespia.jpeg" class="card-img-top" alt="Mica Plástico 4">
+                        <img src="./img/Ceramica Antiespia.jpeg" alt="Mica Ceramica Antiespia">
                         <div class="card-body">
                             <h5 class="card-title">Mica Ceramica Antireflejo o Antiespia</h5>
                             <p class="card-text">Flexible y ligera, ideal para la grasa, huellas, antirreflejo.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center mt-4">
-                <a href="Register.html" class="btn btn-success">Ir al Inicio de sesión</a>
+                <a href="Login.html" class="btn btn-success">Ir al Inicio de sesión</a>
             </div>
         </div>
     </div>
 
     <footer class="text-center mt-5 py-4" style="background-color: #007bff; color: white;">
-        <p>&copy; 2024 Tienda de Micas. Todos los derechos reservados.</p>
+        <p>© 2024 Tienda de Micas. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

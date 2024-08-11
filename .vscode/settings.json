@@ -11,5 +11,8 @@
         "Semana6/crudrapido/src/main/java/com/example/crudrapido"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "cSpell.words": [
+        "Idat"
+    ]
 }
