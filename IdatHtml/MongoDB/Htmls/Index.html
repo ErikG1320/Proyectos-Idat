@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Insertar Usuario</h1>
+    <form action="/insertar" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="apellido">Apellido Completo:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="number" id="telefono" name="telefono" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required><br><br>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+        <label for="pais">Pais:</label>
+        <input type="text" id="pais" name="pais" required><br><br>
+        <div class="boton-insertar">
+            <button class="btn-insertar" type="submit">Insertar</button>
+        </div>
+        <br>
+        <div class="boton-mostrar">
+            <button class="btn-mostrar" onclick="window.location.href='../Views/Mostrar.ejs'">Mostrar Usuarios</button>
+        </div>
+</body>
+</html>

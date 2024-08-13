@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "IdatApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.IdatApplication",
+            "projectName": "idat"
+        },
+        {
+            "type": "java",
             "name": "JavaApplication",
             "request": "launch",
             "mainClass": "com.example.demo.JavaApplication",

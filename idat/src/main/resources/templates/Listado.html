@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- Barra de Búsqueda -->
+    <h1>Barra de Búsqueda</h1>
+    <form action="./Busqueda.html" method="post">
+        <input type="text" name="busqueda" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+    </form>
+
     <table class="table table-light">
         <thead class="thead-light">
             <tr>
@@ -23,21 +31,21 @@
                 <th>Acciónes</th>
             </tr>
         </thead>
-        <tbody class="">
-            <tr>
-                <h1>Barra de Búsqueda</h1>
-                <form action="./Busqueda" method="get">
-                    <input type="text" name="busqueda" placeholder="Buscar productos...">
-                    <button type="submit">Buscar</button>
-                </form>
-                <td></td>
+        <tbody>
+            <tr th:each="TiendaMicas : ${Listado}">
+                <td th:text="${TiendaMicas.id}"></td>
+                <td th:text="${TiendaMicas.nombreModelo}"></td>
+                <td th:text="${TiendaMicas.tipoMica}"></td>
+                <td th:text="${TiendaMicas.descripcion}"></td>
+                <td th:text="${TiendaMicas.precio}"></td>
+                <td th:text="${TiendaMicas.cantidadEnStock}"></td>
+                <td th:text="${TiendaMicas.fabricante}"></td>
+                <td th:text="${TiendaMicas.direccion}"></td>
+                <td th:text="${TiendaMicas.email}"></td>
+                <td th:text="${TiendaMicas.telefono}"></td>
+                <td th:text="${TiendaMicas.fecha}"></td>
             </tr>
         </tbody>
-        <!-- <tfoot>
-            <tr>
-                <th>#</th>
-            </tr>
-        </tfoot> -->
     </table>
 </body>
 </html>

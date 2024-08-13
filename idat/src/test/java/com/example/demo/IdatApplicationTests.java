@@ -3,43 +3,34 @@ package com.example.demo;
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.example.demo.Entity.TiendaProductos;
-import com.example.demo.Repository.TiendaRepository;
+import com.example.demo.Entity.TiendaMicas;
 
 @SpringBootTest
 public class IdatApplicationTests {
-    @Autowired
-    private TiendaRepository repository;
 
     // private static final Logger logger = LoggerFactory.getLogger(IdatApplicationTests.class);
+
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    private static final Logger logger = LoggerFactory.getLogger(IdatApplicationTests.class);
-
     @Test
-    public void testPasswordEncoding() {
-        String rawPassword = "holamundo";
-        String encodedPassword = passwordEncoder.encode(rawPassword);
+public void testPasswordEncoding() {
+    String rawPassword = "Mimundosinella-Armonia10";
+    String encodedPassword = passwordEncoder.encode(rawPassword);
 
-        // Verifica que las contraseñas no sean iguales
-        assertThat(encodedPassword).isNotEqualTo(rawPassword);
+    assertThat(encodedPassword).isNotEqualTo(rawPassword);
+    assertThat(passwordEncoder.matches(rawPassword, encodedPassword)).isTrue();
 
-        // Verifica que la contraseña encriptada coincida con la contraseña original
-        assertThat(passwordEncoder.matches(rawPassword, encodedPassword)).isTrue();
-
-        // Simulación de guardar un usuario
-        TiendaProductos usuarioEjemplo = new TiendaProductos("usuario", encodedPassword);
-        repository.save(usuarioEjemplo);
-    }
-
-    public void save(TiendaProductos usuario) {
-        logger.info("Guardando usuario con contraseña encriptada: " + usuario.getPassword());
-    }
+    TiendaMicas usuarioEjemplo = new TiendaMicas("usuario", encodedPassword);
+    
+    // Impresión de la contraseña encriptada en la consola
+    System.out.println("Contraseña encriptada: " + usuarioEjemplo.getContraseña());
+    // Simulación de imprimir un usuario localmente en la consola
+    System.out.println("Usuario: " + usuarioEjemplo);
+    System.out.println(encodedPassword);
+}
 }

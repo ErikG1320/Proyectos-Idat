@@ -1,0 +1,95 @@
+/* styles.css */
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+} */
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+/* styles.css */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* styles.css */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+/* styles.css */
+.btn-show {
+    background-color: #2ECC40;
+}
+
+.btn-show:hover {
+    background-color: #228B22;
+}
+
+/* Styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* Styles.css */
+.boton-insertar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará verticalmente los botones */
+}
+/* Styles.css */
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará verticalmente los botones */
+}
+/* Styles.css */
+.boton-mostrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará verticalmente los botones */
+}
+
