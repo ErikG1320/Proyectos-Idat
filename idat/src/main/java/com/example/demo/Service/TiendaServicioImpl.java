@@ -32,7 +32,7 @@ public class TiendaServicioImpl implements TiendaServicio {
     }
     @Override
     public TiendaMicas getProductoById(int id) {
-        return tiendaRepositorio.getProductById(id).orElse(null);
+        return tiendaRepositorio.findById(id).orElse(null);
     }
 
     @Override
