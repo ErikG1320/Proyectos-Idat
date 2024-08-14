@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Agrega Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    
+    <h1>Resultado de los productos</h1>
+
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Nombre modelo</th>
+                <th>Tipo de mica</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Fabricante</th>
+                <th>Dirección</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Fecha de venta</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="TiendaMicas : ${Listado}">
+                <td th:text="${TiendaMicas.id}"></td>
+                <td th:text="${TiendaMicas.nombreModelo}"></td>
+                <td th:text="${TiendaMicas.tipoMica}"></td>
+                <td th:text="${TiendaMicas.descripcion}"></td>
+                <td th:text="${TiendaMicas.precio}"></td>
+                <td th:text="${TiendaMicas.cantidadEnStock}"></td>
+                <td th:text="${TiendaMicas.fabricante}"></td>
+                <td th:text="${TiendaMicas.direccion}"></td>
+                <td th:text="${TiendaMicas.email}"></td>
+                <td th:text="${TiendaMicas.telefono}"></td>
+                <td th:text="${TiendaMicas.fecha}"></td>
+                <td class="d-flex">
+                    <a th:href="@{'/editar/' + ${TiendaMicas.id}}" class="btn btn-warning btn-sm mr-2">Editar</a>
+                    <a th:href="@{'/eliminar/' + ${TiendaMicas.id}}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Agrega JavaScript de Bootstrap para funcionalidades interactivas (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -3,49 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Tienda de Micas</title>
 </head>
 <body>
-
     <!-- Barra de Búsqueda -->
-    <h1>Barra de Búsqueda</h1>
-    <form action="./Busqueda.html" method="post">
-        <input type="text" name="busqueda" placeholder="Buscar productos...">
-        <button type="submit">Buscar</button>
-    </form>
+    <div class="container my-4">
+        <h1 class="text-center">Tienda de Micas</h1>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <form action="./Busqueda.html" method="post" class="form-inline w-75">
+                <div class="input-group w-100">
+                    <input type="text" name="busqueda" class="form-control" placeholder="Buscar productos..." aria-label="Buscar productos...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
+                </div>
+            </form>
+            <a href="Agregar.html" class="btn btn-success">Agregar Producto</a>
+        </div>
+    </div>
 
-    <table class="table table-light">
-        <thead class="thead-light">
-            <tr>
-                <th>#</th>
-                <th>Nombre modelo</th>
-                <th>Tipo de mica</th>
-                <th>Descripcion</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Fabricante</th>
-                <th>Direccion</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Fecha de venta</th>
-                <th>Acciónes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="TiendaMicas : ${Listado}">
-                <td th:text="${TiendaMicas.id}"></td>
-                <td th:text="${TiendaMicas.nombreModelo}"></td>
-                <td th:text="${TiendaMicas.tipoMica}"></td>
-                <td th:text="${TiendaMicas.descripcion}"></td>
-                <td th:text="${TiendaMicas.precio}"></td>
-                <td th:text="${TiendaMicas.cantidadEnStock}"></td>
-                <td th:text="${TiendaMicas.fabricante}"></td>
-                <td th:text="${TiendaMicas.direccion}"></td>
-                <td th:text="${TiendaMicas.email}"></td>
-                <td th:text="${TiendaMicas.telefono}"></td>
-                <td th:text="${TiendaMicas.fecha}"></td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Tabla de Productos -->
+    <div class="container">
+        <table class="table table-light table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre modelo</th>
+                    <th>Tipo de mica</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Fabricante</th>
+                    <th>Dirección</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de venta</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Se genera una fila por cada elemento en la lista Listado -->
+                <tr th:each="TiendaMicas : ${Listado}">
+                    <td th:text="${TiendaMicas.id}"></td>
+                    <td th:text="${TiendaMicas.nombreModelo}"></td>
+                    <td th:text="${TiendaMicas.tipoMica}"></td>
+                    <td th:text="${TiendaMicas.descripcion}"></td>
+                    <td th:text="${TiendaMicas.precio}"></td>
+                    <td th:text="${TiendaMicas.cantidadEnStock}"></td>
+                    <td th:text="${TiendaMicas.fabricante}"></td>
+                    <td th:text="${TiendaMicas.direccion}"></td>
+                    <td th:text="${TiendaMicas.email}"></td>
+                    <td th:text="${TiendaMicas.telefono}"></td>
+                    <td th:text="${TiendaMicas.fecha}"></td> 
+                    <!-- Botones de acción para cada producto -->
+                    <td class="d-flex">
+                        <a th:href="@{'/editar/' + ${TiendaMicas.id}}" class="btn btn-warning btn-sm mr-2">Editar</a>
+                        <a th:href="@{'/eliminar/' + ${TiendaMicas.id}}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>

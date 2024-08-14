@@ -21,7 +21,7 @@ public class InicioController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @GetMapping("/Home")
+    @GetMapping("/home")
     public String login() {
         return "Home";
     }
@@ -29,7 +29,6 @@ public class InicioController {
     @GetMapping("/register")
     public String register(Model model) {
         model.addAttribute("usuario", new TiendaMicas());
-
         return "register";
     }
 
@@ -38,38 +37,43 @@ public class InicioController {
         nombre.setContraseña(passwordEncoder.encode(nombre.getContraseña()));
         tiendaServicio.saveProducto(nombre);
         model.addAttribute("message", "Usuario registrado exitosamente!");
-        return "Home"; // Redirecciona a la página de inicio
+        return "Home";
     }
 
-    @PostMapping("/Inicio")
+    @PostMapping("/inicio")
     public String loginTienda(@ModelAttribute TiendaMicas nombre, Model model) {
         TiendaMicas storeduser = tiendaServicio.findByNombre(nombre.getNombre());
-        if (storeduser != null
-                && passwordEncoder.matches(nombre.getContraseña(), storeduser.getContraseña())) {
+        if (storeduser != null && passwordEncoder.matches(nombre.getContraseña(), storeduser.getContraseña())) {
             model.addAttribute("message", "Inicio de sesión exitoso!");
-            return "Listado"; // Redirige a la página de listado después de iniciar sesión exitosamente
+            return "Listado";
         } else {
             model.addAttribute("error", "Correo o contraseña incorrectos.");
-            return "Inicio"; // Mantente en la página de login en caso de error
+            return "Inicio";
         }
     }
 
-    @PostMapping("/Busqueda")
+    @PostMapping("/busqueda")
     public String buscarProducto(@RequestParam("busqueda") String busqueda, Model model) {
-        if (busqueda == null) { 
+        if (busqueda == null || busqueda.isEmpty()) {
             return "Error"; // Redirige a la página de error si la búsqueda es vacía
-        }else{
+        } else {
             TiendaMicas resultados = tiendaServicio.findByNombreMica(busqueda);
             if (resultados == null) {
-                
-                int id = Integer.parseInt(busqueda);
-                TiendaMicas productoPorId = tiendaServicio.getProductoById(id);
-                if (productoPorId!= null) {
-                    resultados = productoPorId;
+                try {
+                    int id = Integer.parseInt(busqueda);
+                    TiendaMicas productoPorId = tiendaServicio.getProductoById(id);
+                    if (productoPorId != null) {
+                        resultados = productoPorId;
+                    }
+                } catch (NumberFormatException e) {
+                    resultados = tiendaServicio.findByNombre(busqueda);
+                    if (resultados == null) {
+                        return "Error";
+                    }
                 }
             }
-            model.addAttribute("Listado", resultados);
-            return "Busqueda"; 
+            model.addAttribute("listado", resultados);
+            return "Busqueda";
         }
     }
 

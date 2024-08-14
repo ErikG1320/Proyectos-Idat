@@ -22,7 +22,7 @@ public interface TiendaServicio {
     public TiendaMicas saveProducto(TiendaMicas producto);
 
     // Método para eliminar un producto por su ID
-    public void deleteProducto(Long id);
+    public void deleteProducto(Integer id);
 
     // Métodos adicionales para validar stock y precio
     public boolean validarStock(TiendaMicas producto);

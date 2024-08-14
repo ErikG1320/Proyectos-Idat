@@ -39,9 +39,9 @@ public class TiendaServicioImpl implements TiendaServicio {
     public TiendaMicas saveProducto(TiendaMicas producto) {
         return tiendaRepositorio.save(producto);
     }
-
+    
     @Override
-    public void deleteProducto(Long id) {
+    public void deleteProducto(Integer id) {
         tiendaRepositorio.deleteById(id);
     }
 

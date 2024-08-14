@@ -1,0 +1,14 @@
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\bin\Debug\netcoreapp2.1\NeptunoWebApi21.deps.json
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\bin\Debug\netcoreapp2.1\NeptunoWebApi21.runtimeconfig.json
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\bin\Debug\netcoreapp2.1\NeptunoWebApi21.runtimeconfig.dev.json
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\bin\Debug\netcoreapp2.1\NeptunoWebApi21.dll
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.csprojAssemblyReference.cache
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.csproj.CoreCompileInputs.cache
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.RazorAssemblyInfo.cache
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.RazorAssemblyInfo.cs
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.AssemblyInfoInputs.cache
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.AssemblyInfo.cs
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.RazorTargetAssemblyInfo.cache
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\bin\Debug\netcoreapp2.1\NeptunoWebApi21.pdb
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.dll
+E:\React20242\Semana13-IV02\SlnNeptunoWebApi21\NeptunoWebApi21\obj\Debug\netcoreapp2.1\NeptunoWebApi21.pdb
