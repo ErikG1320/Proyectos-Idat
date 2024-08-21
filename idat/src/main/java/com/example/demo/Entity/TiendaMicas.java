@@ -6,7 +6,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 import jakarta.persistence.Column;
-// import javax.persistence.Entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,24 +20,24 @@ public class TiendaMicas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Size(min = 2, max = 50)
     @Column(name = "nombre", length = 50)
+    @Size(min = 2, max = 50)
     private String nombre;
 
+    @Column(name = "contraseña", length = 100)
     @Size(min = 8, max = 100)
-    @Column(name = "contraseña",length = 100)
     private String contraseña;
 
+    @Column(name = "tipo_mica", length = 50)
     @Size(max = 50)
-    @Column(name = "tipo_mica", length = 50 )
     private String tipoMica;
 
-    @Size(max = 50)
     @Column(name = "nombre_modelo", length = 50)
+    @Size(max = 50)
     private String nombreModelo;
 
-    @Size(max = 255)
     @Column(name = "descripcion", length = 255)
+    @Size(max = 255)
     private String descripcion;
 
     @Column(name = "precio", nullable = false)
@@ -47,21 +46,21 @@ public class TiendaMicas {
     @Column(name = "cantidad_en_stock", nullable = false)
     private int cantidadEnStock;
 
-    @Size(max = 100)
     @Column(name = "fabricante", length = 100)
+    @Size(max = 100)
     private String fabricante;
 
-    @Size(max = 100)
     @Column(name = "direccion", length = 100)
+    @Size(max = 100)
     private String direccion;
 
+    @Column(name = "email", length = 50)
     @Email
     @Size(max = 50)
-    @Column(name = "email", length = 50)
     private String email;
 
-    @Size(max = 15)
     @Column(name = "telefono", length = 15)
+    @Size(max = 15)
     private String telefono;
 
     @Column(name = "fecha", nullable = false)
@@ -70,8 +69,8 @@ public class TiendaMicas {
     @Column(name = "activo", nullable = false)
     private boolean activo;
 
-    @Size(max = 50)
     @Column(name = "rol", length = 50)
+    @Size(max = 50)
     private String rol;
 
     public TiendaMicas() {
@@ -80,14 +79,17 @@ public class TiendaMicas {
     }
 
     public TiendaMicas(String nombre, String contraseña) {
+        this();
         this.nombre = nombre;
         this.contraseña = contraseña;
     }
 
     public TiendaMicas(Integer id, @Size(max = 50) String tipoMica, @Size(max = 50) String nombreModelo,
-            @Size(max = 255) String descripcion, double precio, int cantidadEnStock, @Size(max = 100) String fabricante,
-            @Size(max = 100) String direccion, @Email @Size(max = 50) String email, @Size(max = 15) String telefono,
-            LocalDate fecha) {
+                       @Size(max = 255) String descripcion, double precio, int cantidadEnStock,
+                       @Size(max = 100) String fabricante, @Size(max = 100) String direccion,
+                       @Email @Size(max = 50) String email, @Size(max = 15) String telefono,
+                       LocalDate fecha) {
+        this();
         this.id = id;
         this.tipoMica = tipoMica;
         this.nombreModelo = nombreModelo;
@@ -101,10 +103,10 @@ public class TiendaMicas {
         this.fecha = fecha;
     }
 
-    
-
     public TiendaMicas(Integer id, @Size(min = 2, max = 50) String nombre, @Size(min = 8, max = 100) String contraseña,
-            @Size(max = 100) String direccion, @Email @Size(max = 50) String email, @Size(max = 15) String telefono) {
+                       @Size(max = 100) String direccion, @Email @Size(max = 50) String email,
+                       @Size(max = 15) String telefono) {
+        this();
         this.id = id;
         this.nombre = nombre;
         this.contraseña = contraseña;
@@ -114,6 +116,7 @@ public class TiendaMicas {
     }
 
     public TiendaMicas(Integer id, boolean activo, @Size(max = 50) String rol) {
+        this();
         this.id = id;
         this.activo = activo;
         this.rol = rol;
@@ -242,7 +245,7 @@ public class TiendaMicas {
 
     @Override
     public String toString() {
-        return "TiendaProductos{" +
+        return "TiendaMicas{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", contraseña='" + contraseña + '\'' +

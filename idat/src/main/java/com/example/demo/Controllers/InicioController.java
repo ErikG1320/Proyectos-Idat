@@ -21,7 +21,7 @@ public class InicioController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @GetMapping("/home")
+    @GetMapping("/Home")
     public String login() {
         return "Home";
     }

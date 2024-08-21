@@ -1,0 +1,6 @@
+@NeptunoWebApi_HostAddress = http://localhost:5152
+
+GET {{NeptunoWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
