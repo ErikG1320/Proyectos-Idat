@@ -26,13 +26,13 @@ public class InicioController {
         return "Home";
     }
 
-    @GetMapping("/register")
+    @GetMapping("/Register")
     public String register(Model model) {
         model.addAttribute("usuario", new TiendaMicas());
-        return "register";
+        return "Register";
     }
 
-    @PostMapping("/register")
+    @PostMapping("/Register")
     public String registerTienda(@ModelAttribute TiendaMicas nombre, Model model) {
         nombre.setContraseña(passwordEncoder.encode(nombre.getContraseña()));
         tiendaServicio.saveProducto(nombre);

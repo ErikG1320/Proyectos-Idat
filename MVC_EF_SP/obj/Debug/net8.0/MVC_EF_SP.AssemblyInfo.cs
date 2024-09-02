@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC_EF_SP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccc91c39db255f5f329eb9f579655d6ec269a93a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba2d85ffe2f202444435b165f78d88df24ab9afa")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC_EF_SP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC_EF_SP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

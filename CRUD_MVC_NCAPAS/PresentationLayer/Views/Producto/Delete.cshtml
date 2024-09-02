@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+<h1>@ViewData["Title"]</h1>
+@model DataAccess.Producto
+<h2>¿Está seguro que desea eliminar el producto?</h2>
+
+@* <form asp-action="Delete" asp-route-id="@Model.Id">
+    <input type="submit" value="Eliminar" />
+    <a asp-action="Index">Cancelar</a>
+</form> *@
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            Marca
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        </dt>
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class="col-sm-2">
+            Precio
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            Categoría
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.Fecha)
+        </dt>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar Producto" class="btn btn-danger" onclick="return confirm('Estas seguro de eliminar el articulo')"/>
+        <a asp-action="Index" class="btn btn-primary">Cancelar</a>
+    </form>
+    <div>
+        <b>@ViewBag.mensaje</b>
+    </div>
+</div>

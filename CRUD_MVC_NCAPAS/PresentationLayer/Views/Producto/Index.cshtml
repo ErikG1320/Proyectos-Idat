@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Lista de Productos";
+}
+@model List<DataAccess.Producto>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create Nuevo Producto</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Fecha</th>
+            <th>Opciones de administrador</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nombre</td>
+                <td>@item.Marca</td>
+                <td>@item.Cantidad</td>
+                <td>@item.Precio</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Fecha</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

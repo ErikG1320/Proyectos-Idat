@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TiendaApplication",
+            "request": "launch",
+            "mainClass": "com.tiendaimg.tienda.TiendaApplication",
+            "projectName": "tienda"
+        },
+        {
+            "type": "java",
             "name": "IdatApplication",
             "request": "launch",
             "mainClass": "com.example.demo.IdatApplication",

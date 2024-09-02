@@ -9,7 +9,7 @@
       "code": "NU1604",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "La dependencia del proyecto ../DataAccess/DataAccess.csproj no contiene un límite inferior inclusivo. Inclúyalo en la versión de la dependencia para garantizar resultados de restauración coherentes.",
+      "message": "Project dependency ../DataAccess/DataAccess.csproj does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
       "libraryId": "../DataAccess/DataAccess.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v8.0"
@@ -18,7 +18,7 @@
     {
       "code": "NU1101",
       "level": "Error",
-      "message": "No se encuentra el paquete ../DataAccess/DataAccess.csproj. No existe ningún paquete con este id. en los orígenes: nuget.org",
+      "message": "Unable to find package ../DataAccess/DataAccess.csproj. No packages exist with this id in source(s): nuget.org",
       "libraryId": "../DataAccess/DataAccess.csproj",
       "targetGraphs": [
         "net8.0"

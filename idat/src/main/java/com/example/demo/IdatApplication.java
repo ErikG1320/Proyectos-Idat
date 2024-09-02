@@ -9,5 +9,4 @@ public class IdatApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(IdatApplication.class, args);
 	}
-
 }
