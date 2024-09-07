@@ -3,6 +3,8 @@ package com.example.demo.Entity;
 import java.time.LocalDate;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Size;
 
 import jakarta.persistence.Column;
@@ -20,13 +22,15 @@ public class TiendaMicas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "nombre", length = 50)
+    @Column(name = "nombre_usuario", length = 50, nullable = false)
+    @NotNull
     @Size(min = 2, max = 50)
-    private String nombre;
+    private String nombreUsuario;
 
-    @Column(name = "contraseña", length = 100)
+    @Column(name = "contrasena", length = 100, nullable = false)
+    @NotNull
     @Size(min = 8, max = 100)
-    private String contraseña;
+    private String contrasena;
 
     @Column(name = "tipo_mica", length = 50)
     @Size(max = 50)
@@ -41,9 +45,11 @@ public class TiendaMicas {
     private String descripcion;
 
     @Column(name = "precio", nullable = false)
+    @NotNull
     private double precio;
 
     @Column(name = "cantidad_en_stock", nullable = false)
+    @NotNull
     private int cantidadEnStock;
 
     @Column(name = "fabricante", length = 100)
@@ -64,9 +70,12 @@ public class TiendaMicas {
     private String telefono;
 
     @Column(name = "fecha", nullable = false)
+    @NotNull
+    @PastOrPresent
     private LocalDate fecha;
 
     @Column(name = "activo", nullable = false)
+    @NotNull
     private boolean activo;
 
     @Column(name = "rol", length = 50)
@@ -78,16 +87,18 @@ public class TiendaMicas {
         this.activo = true;
     }
 
-    public TiendaMicas(String nombre, String contraseña) {
+    // Constructor para registrar usuario
+    public TiendaMicas(String nombreUsuario, String contrasena) {
         this();
-        this.nombre = nombre;
-        this.contraseña = contraseña;
+        this.nombreUsuario = nombreUsuario;
+        this.contrasena = contrasena;
     }
 
-    public TiendaMicas(Integer id, @Size(max = 50) String tipoMica, @Size(max = 50) String nombreModelo,
-                       @Size(max = 255) String descripcion, double precio, int cantidadEnStock,
-                       @Size(max = 100) String fabricante, @Size(max = 100) String direccion,
-                       @Email @Size(max = 50) String email, @Size(max = 15) String telefono,
+    // Constructor con detalles completos del producto
+    public TiendaMicas(Integer id, String tipoMica, String nombreModelo,
+                       String descripcion, double precio, int cantidadEnStock,
+                       String fabricante, String direccion,
+                       String email, String telefono,
                        LocalDate fecha) {
         this();
         this.id = id;
@@ -103,26 +114,31 @@ public class TiendaMicas {
         this.fecha = fecha;
     }
 
-    public TiendaMicas(Integer id, @Size(min = 2, max = 50) String nombre, @Size(min = 8, max = 100) String contraseña,
-                       @Size(max = 100) String direccion, @Email @Size(max = 50) String email,
-                       @Size(max = 15) String telefono) {
-        this();
-        this.id = id;
-        this.nombre = nombre;
-        this.contraseña = contraseña;
-        this.direccion = direccion;
-        this.email = email;
-        this.telefono = telefono;
-    }
-
-    public TiendaMicas(Integer id, boolean activo, @Size(max = 50) String rol) {
-        this();
-        this.id = id;
-        this.activo = activo;
-        this.rol = rol;
-    }
-
     // Getters y Setters
+    
+    // Métodos adicionales pueden incluir lógica de negocio relevante
+
+    @Override
+    public String toString() {
+        return "TiendaMicas{" +
+                "id=" + id +
+                ", nombreUsuario='" + nombreUsuario + '\'' +
+                ", contrasena='" + contrasena + '\'' +
+                ", tipoMica='" + tipoMica + '\'' +
+                ", nombreModelo='" + nombreModelo + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
+                ", cantidadEnStock=" + cantidadEnStock +
+                ", fabricante='" + fabricante + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", fecha=" + fecha +
+                ", activo=" + activo +
+                ", rol='" + rol + '\'' +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }
@@ -131,20 +147,20 @@ public class TiendaMicas {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getTipoMica() {
@@ -227,50 +243,11 @@ public class TiendaMicas {
         this.fecha = fecha;
     }
 
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-    @Override
-    public String toString() {
-        return "TiendaMicas{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", contraseña='" + contraseña + '\'' +
-                ", tipoMica='" + tipoMica + '\'' +
-                ", nombreModelo='" + nombreModelo + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", precio=" + precio +
-                ", cantidadEnStock=" + cantidadEnStock +
-                ", fabricante='" + fabricante + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", email='" + email + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", fecha=" + fecha +
-                ", activo=" + activo +
-                ", rol='" + rol + '\'' +
-                '}';
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         TiendaMicas that = (TiendaMicas) o;
-
         return id != null ? id.equals(that.id) : that.id == null;
     }
 

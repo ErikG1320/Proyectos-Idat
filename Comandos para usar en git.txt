@@ -1,28 +1,38 @@
-Comandos para usar en git
-Configuración global (para todos los proyectos): Abre una terminal de Git y ejecuta los siguientes comandos, reemplazando "Tu nombre" y 
-"tuemail@tudominio.com" con tu información:
-
-git config --global user.name "Tu nombre"
-git config --global user.email "tuemail@tudominio.com"
-
-2.Configuración particular del proyecto: Si deseas configurar un nombre de usuario y correo electrónico específico para un proyecto en particular, sigue estos pasos:
-Ve al repositorio del proyecto en la terminal.
-Ejecuta los siguientes comandos, reemplazando "nombre de usuario" y "usuario@gmail.com" con la información adecuada:
-
-git config user.name "nombre de usuario"
-git config user.email usuario@gmail.com
-
-3.Añade Camibios y los prepara para stage
- 
-git add .
-
-4.Agrega un commit y mensaje de información
-
-git commit -m "Agregué nuevas funcionalidades"
-
-5.PUsh a la rama integrada
-
-git push origin master
-
-
-
+1. Configuración
+git config --global user.name "Tu Nombre": Configura tu nombre de usuario.
+git config --global user.email "tuemail@ejemplo.com": Configura tu correo electrónico.
+git config --list: Muestra todas las configuraciones actuales de Git.
+2. Inicialización
+git init: Inicializa un nuevo repositorio de Git en el directorio actual.
+3. Clonación
+git clone [URL del repositorio]: Clona un repositorio remoto en tu máquina local.
+4. Estado
+git status: Muestra el estado de los cambios en el directorio de trabajo.
+5. Seguimiento de archivos
+git add [archivo]: Agrega un archivo al área de preparación (staging area).
+git add .: Agrega todos los archivos modificados al área de preparación.
+6. Confirmación de cambios
+git commit -m "Mensaje de confirmación": Confirma los cambios en el repositorio local con un mensaje descriptivo.
+git commit -a -m "Mensaje de confirmación": Confirma todos los archivos modificados y rastreados.
+7. Historial
+git log: Muestra el historial de confirmaciones del repositorio.
+git log --oneline: Muestra el historial de confirmaciones en una sola línea por cada commit.
+8. Sincronización con repositorio remoto
+git push: Sube los cambios confirmados al repositorio remoto.
+git pull: Descarga y fusiona los cambios del repositorio remoto al repositorio local.
+git fetch: Descarga los cambios del repositorio remoto sin fusionarlos.
+9. Ramas
+git branch: Lista todas las ramas en el repositorio.
+git branch [nombre-rama]: Crea una nueva rama.
+git checkout [nombre-rama]: Cambia a la rama especificada.
+git checkout -b [nombre-rama]: Crea una nueva rama y cambia a ella.
+git merge [nombre-rama]: Fusiona la rama especificada con la rama actual.
+10. Deshacer cambios
+git reset --hard [commit]: Restablece el repositorio a un commit específico, descartando todos los cambios posteriores.
+git revert [commit]: Deshace un commit específico creando un nuevo commit que invierte los cambios.
+11. Etiquetas (Tags)
+git tag [nombre]: Crea una etiqueta con el nombre especificado en el último commit.
+git tag -a [nombre] -m "Mensaje": Crea una etiqueta anotada con un mensaje.
+12. Repositorios remotos
+git remote -v: Muestra las URL de los repositorios remotos configurados.
+git remote add [nombre] [URL]: Añade un nuevo repositorio remoto con el nombre especificado.

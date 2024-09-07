@@ -33,40 +33,52 @@ public class InicioController {
     }
 
     @PostMapping("/Register")
-    public String registerTienda(@ModelAttribute TiendaMicas nombre, Model model) {
-        nombre.setContraseña(passwordEncoder.encode(nombre.getContraseña()));
-        tiendaServicio.saveProducto(nombre);
-        model.addAttribute("message", "Usuario registrado exitosamente!");
+    public String registerTienda(@ModelAttribute TiendaMicas usuario, Model model) {
+        usuario.setContraseña(passwordEncoder.encode(usuario.getContraseña()));
+        // Guardar usuario en la base de datos
+        tiendaServicio.guardarProducto(usuario);
+        model.addAttribute("message", "Producto registrado exitosamente!");
         return "Home";
     }
 
     @PostMapping("/inicio")
-    public String loginTienda(@ModelAttribute TiendaMicas nombre, Model model) {
-        TiendaMicas storeduser = tiendaServicio.findByNombre(nombre.getNombre());
-        if (storeduser != null && passwordEncoder.matches(nombre.getContraseña(), storeduser.getContraseña())) {
+    public String loginTienda(@ModelAttribute TiendaMicas usuario, Model model) {
+        // Obtén el usuario de la base de datos usando el nombre de usuario proporcionado
+        TiendaMicas storedUser = tiendaServicio.existsByNombreUsuario(usuario.getNombreUsuario());
+        
+        // Verifica si el usuario existe y si la contraseña es correcta
+        if (storedUser != null && passwordEncoder.matches(usuario.getContrasena(), storedUser.getContrasena())) {
+            // Agrega un atributo de éxito de inicio de sesión
             model.addAttribute("message", "Inicio de sesión exitoso!");
-            return "Listado";
+            
+            // Agrega el usuario autenticado al modelo, si necesitas mostrar sus detalles
+            model.addAttribute("usuario", storedUser);
+            
+            // Redirige a la página "Listado" (ajusta la ruta según sea necesario)
+            return "redirect:/listado";
         } else {
+            // Si las credenciales no son correctas, muestra un mensaje de error
             model.addAttribute("error", "Correo o contraseña incorrectos.");
             return "Inicio";
         }
     }
+    
 
     @PostMapping("/busqueda")
     public String buscarProducto(@RequestParam("busqueda") String busqueda, Model model) {
         if (busqueda == null || busqueda.isEmpty()) {
             return "Error"; // Redirige a la página de error si la búsqueda es vacía
         } else {
-            TiendaMicas resultados = tiendaServicio.findByNombreMica(busqueda);
+            TiendaMicas resultados = tiendaServicio.getProductoPorModelo(busqueda);
             if (resultados == null) {
                 try {
                     int id = Integer.parseInt(busqueda);
-                    TiendaMicas productoPorId = tiendaServicio.getProductoById(id);
+                    TiendaMicas productoPorId = tiendaServicio.getProductobyId(id);
                     if (productoPorId != null) {
                         resultados = productoPorId;
                     }
                 } catch (NumberFormatException e) {
-                    resultados = tiendaServicio.findByNombre(busqueda);
+                    resultados = tiendaServicio.getProductoPorModelo(busqueda);
                     if (resultados == null) {
                         return "Error";
                     }

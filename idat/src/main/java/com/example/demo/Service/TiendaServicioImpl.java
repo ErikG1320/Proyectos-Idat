@@ -1,4 +1,3 @@
-// Repositorio
 package com.example.demo.Service;
 
 import java.util.List;
@@ -13,8 +12,30 @@ import com.example.demo.Repository.TiendaRepository;
 @Service
 public class TiendaServicioImpl implements TiendaServicio {
 
+    private final TiendaRepository tiendaRepositorio;
+    private final BCryptPasswordEncoder passwordEncoder;
+
     @Autowired
-    private TiendaRepository tiendaRepositorio;
+    public TiendaServicioImpl(TiendaRepository tiendaRepositorio, BCryptPasswordEncoder passwordEncoder) {
+        this.tiendaRepositorio = tiendaRepositorio;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    @Override
+    public TiendaMicas registrarUsuario(String nombre, String contrasena) {
+        if (tiendaRepositorio.existsByNombre(nombre)) {
+            throw new IllegalArgumentException("El nombre de usuario ya está en uso.");
+        }
+        String encryptedPassword = passwordEncoder.encode(contrasena);
+        TiendaMicas usuario = new TiendaMicas(nombre, encryptedPassword);
+        return tiendaRepositorio.save(usuario);
+    }
+
+    @Override
+    public boolean verificarCredenciales(String nombre, String contraseña) {
+        TiendaMicas usuario = tiendaRepositorio.findByNombre(nombre);
+        return usuario != null && passwordEncoder.matches(contraseña, usuario.getContrasena());
+    }
 
     @Override
     public List<TiendaMicas> getProductos() {
@@ -22,27 +43,48 @@ public class TiendaServicioImpl implements TiendaServicio {
     }
 
     @Override
-    public TiendaMicas findByNombreMica(String nombreModelo) {
-        return tiendaRepositorio.findByNombreModelo(nombreModelo);
-    }
-
-    @Override
-    public TiendaMicas findByNombre(String nombre) {
-        return tiendaRepositorio.findByNombre(nombre);
-    }
-    @Override
-    public TiendaMicas getProductoById(int id) {
+    public TiendaMicas getProductobyId(int id) {
         return tiendaRepositorio.findById(id).orElse(null);
     }
 
     @Override
-    public TiendaMicas saveProducto(TiendaMicas producto) {
-        return tiendaRepositorio.save(producto);
+    public boolean existsByNombreUsuario(String nombre_usuario) {
+        return tiendaRepositorio.existsByNombre(nombre_usuario);
     }
-    
+
     @Override
-    public void deleteProducto(Integer id) {
+    public TiendaMicas getProductoPorModelo(String nombreModelo) {
+        return tiendaRepositorio.findByNombreModelo(nombreModelo);
+    }
+
+    @Override
+    public void guardarProducto(TiendaMicas producto) {
+        tiendaRepositorio.save(producto);
+    }
+
+    @Override
+    public void eliminarProducto(int id) {
         tiendaRepositorio.deleteById(id);
+    }
+
+    @Override
+    public List<TiendaMicas> getProductosPorPrecio(double min, double max) {
+        return tiendaRepositorio.findByPrecioBetween(min, max);
+    }
+
+    @Override
+    public List<TiendaMicas> getProductosPorCantidad(int min, int max) {
+        return tiendaRepositorio.findByCantidadEnStockBetween(min, max);
+    }
+
+    @Override
+    public List<TiendaMicas> getProductosPorFabricante(String fabricante) {
+        return tiendaRepositorio.findByFabricante(fabricante);
+    }
+
+    @Override
+    public List<TiendaMicas> getProductosPorCategoria(String categoria) {
+        return tiendaRepositorio.findByTipoMica(categoria);
     }
 
     @Override
@@ -56,21 +98,8 @@ public class TiendaServicioImpl implements TiendaServicio {
     }
 
     @Override
-    public TiendaMicas registrarUsuario(String nombre, String contraseña) {
-        if (tiendaRepositorio.findByNombre(nombre) != null) {
-            throw new IllegalArgumentException("El nombre de usuario ya está en uso.");
-        }
-        String encryptedPassword = new BCryptPasswordEncoder().encode(contraseña);
-        TiendaMicas usuario = new TiendaMicas(nombre, encryptedPassword);
-        return tiendaRepositorio.save(usuario);
-    }
-
-    @Override
-    public boolean verificarCredenciales(String nombre, String contraseña) {
-        TiendaMicas usuario = tiendaRepositorio.findByNombre(nombre);
-        if (usuario != null) {
-            return new BCryptPasswordEncoder().matches(contraseña, usuario.getContraseña());
-        }
-        return false;
+    public List<TiendaMicas> getProductosPorMarca(double min, double max) {
+        // Suponiendo que "marca" es un atributo de la entidad que debe coincidir con un patrón de búsqueda
+        return tiendaRepositorio.findAllByPrecioBetweenAndFabricante(min, max, "Marca");
     }
 }

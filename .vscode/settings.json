@@ -4,7 +4,6 @@
         "Trabajos/Trabajos.sqlproj"
     ],
     "dotnet.help.firstView": "gettingStarted",
-    "dotnet.implementType.insertionBehavior": "atTheEnd",
     "dotnet.server.useOmnisharp": true,
     "editor.fontSize": 15,
     "java.project.sourcePaths": [
@@ -14,5 +13,6 @@
     "java.configuration.updateBuildConfiguration": "interactive",
     "cSpell.words": [
         "Idat"
-    ]
+    ],
+    "dotnet.typeMembers.memberInsertionLocation": "atTheEnd"
 }
