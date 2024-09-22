@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("asp.netEVC1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af05b862c55c2832aa9c98346e64b14a98142e3f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e05bb93eef3ed019318489f96cd27251e8ed76d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("asp.netEVC1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("asp.netEVC1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
