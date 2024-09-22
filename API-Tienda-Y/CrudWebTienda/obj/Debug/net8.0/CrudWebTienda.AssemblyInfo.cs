@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrudWebTienda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e05bb93eef3ed019318489f96cd27251e8ed76d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a94ac528d35c66f1aa4295bc98e1eb9bef7d71a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrudWebTienda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrudWebTienda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
