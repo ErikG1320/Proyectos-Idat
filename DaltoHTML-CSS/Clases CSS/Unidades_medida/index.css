@@ -1,0 +1,28 @@
+body{
+    font-size: 40px;
+    margin: 0;
+}
+div{
+    background: #ededed;
+    padding:20px;
+    border-left:5px solid #ddd;
+    font-size:20px;
+    width:80vw;
+    height:80vh;
+    margin:0;
+    margin:auto;
+    margin-top:10vh;
+}
+h1{
+    margin:0;
+    font-size:22px;
+}
+span{
+    color:red;
+    font-size:16px;
+    font-weight:100;
+    margin-left:2px;
+}
+p{
+    font-size:16px;
+}
