@@ -1,38 +1,250 @@
-1. Configuración
-git config --global user.name "Tu Nombre": Configura tu nombre de usuario.
-git config --global user.email "tuemail@ejemplo.com": Configura tu correo electrónico.
-git config --list: Muestra todas las configuraciones actuales de Git.
-2. Inicialización
-git init: Inicializa un nuevo repositorio de Git en el directorio actual.
-3. Clonación
-git clone [URL del repositorio]: Clona un repositorio remoto en tu máquina local.
-4. Estado
-git status: Muestra el estado de los cambios en el directorio de trabajo.
-5. Seguimiento de archivos
-git add [archivo]: Agrega un archivo al área de preparación (staging area).
-git add .: Agrega todos los archivos modificados al área de preparación.
-6. Confirmación de cambios
-git commit -m "Mensaje de confirmación": Confirma los cambios en el repositorio local con un mensaje descriptivo.
-git commit -a -m "Mensaje de confirmación": Confirma todos los archivos modificados y rastreados.
-7. Historial
-git log: Muestra el historial de confirmaciones del repositorio.
-git log --oneline: Muestra el historial de confirmaciones en una sola línea por cada commit.
-8. Sincronización con repositorio remoto
-git push: Sube los cambios confirmados al repositorio remoto.
-git pull: Descarga y fusiona los cambios del repositorio remoto al repositorio local.
-git fetch: Descarga los cambios del repositorio remoto sin fusionarlos.
-9. Ramas
-git branch: Lista todas las ramas en el repositorio.
-git branch [nombre-rama]: Crea una nueva rama.
-git checkout [nombre-rama]: Cambia a la rama especificada.
-git checkout -b [nombre-rama]: Crea una nueva rama y cambia a ella.
-git merge [nombre-rama]: Fusiona la rama especificada con la rama actual.
-10. Deshacer cambios
-git reset --hard [commit]: Restablece el repositorio a un commit específico, descartando todos los cambios posteriores.
-git revert [commit]: Deshace un commit específico creando un nuevo commit que invierte los cambios.
-11. Etiquetas (Tags)
-git tag [nombre]: Crea una etiqueta con el nombre especificado en el último commit.
-git tag -a [nombre] -m "Mensaje": Crea una etiqueta anotada con un mensaje.
-12. Repositorios remotos
-git remote -v: Muestra las URL de los repositorios remotos configurados.
-git remote add [nombre] [URL]: Añade un nuevo repositorio remoto con el nombre especificado.
+1. Comandos Básicos para Iniciar y Configurar Git
+Configuración de usuario
+bash
+Copiar código
+git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@example.com"
+Define el nombre de usuario y el correo electrónico para tus commits.
+
+Inicializar un Repositorio
+bash
+Copiar código
+git init
+Crea un nuevo repositorio en la carpeta actual.
+
+Clonar un Repositorio
+bash
+Copiar código
+git clone <url_del_repositorio>
+Copia un repositorio existente desde una URL a tu máquina local.
+
+2. Comandos para Gestionar Cambios
+Estado del Repositorio
+bash
+Copiar código
+git status
+Muestra el estado actual de la rama, archivos modificados, sin seguimiento, en staging, etc.
+
+Añadir Cambios al Área de Preparación (Staging)
+bash
+Copiar código
+git add <archivo>
+git add .
+Mueve archivos específicos o todos los cambios al área de staging.
+
+Confirmar Cambios (Commit)
+bash
+Copiar código
+git commit -m "Mensaje del commit"
+Guarda los cambios del área de staging en el historial de commits.
+
+Modificar el Último Commit
+bash
+Copiar código
+git commit --amend -m "Nuevo mensaje"
+Edita el último commit, útil si olvidaste algo o necesitas cambiar el mensaje.
+
+3. Visualizar Historial
+Ver Historial de Commits
+bash
+Copiar código
+git log
+Muestra el historial de commits de la rama actual. Puedes usar opciones para ver más detalles:
+
+bash
+Copiar código
+git log --oneline
+git log --graph --all --decorate
+Mostrar Cambios (Diff)
+bash
+Copiar código
+git diff
+Muestra las diferencias entre el área de trabajo y el último commit.
+
+bash
+Copiar código
+git diff --staged
+Muestra las diferencias entre el área de staging y el último commit.
+
+4. Deshacer Cambios
+Quitar Cambios No Confirmados
+bash
+Copiar código
+git checkout -- <archivo>
+Descarta cambios no confirmados en un archivo específico, restaurándolo al último commit.
+
+Deshacer Cambios en el Área de Staging
+bash
+Copiar código
+git reset <archivo>
+Saca un archivo del área de staging, pero mantiene los cambios en el área de trabajo.
+
+Deshacer el Último Commit
+Mantener los cambios en staging:
+
+bash
+Copiar código
+git reset --soft HEAD~1
+Quitar los cambios de staging y área de trabajo:
+
+bash
+Copiar código
+git reset --hard HEAD~1
+Crear un commit inverso (sin modificar el historial):
+
+bash
+Copiar código
+git revert HEAD
+Reset a un Commit Anterior
+bash
+Copiar código
+git reset --hard <commit_hash>
+Regresa al estado de un commit específico. Ten cuidado: perderás los cambios posteriores si no los has guardado.
+
+5. Trabajo con Ramas
+Crear una Nueva Rama
+bash
+Copiar código
+git branch <nombre_de_la_rama>
+Crea una nueva rama sin cambiarte a ella.
+
+Cambiar de Rama
+bash
+Copiar código
+git checkout <nombre_de_la_rama>
+Cambia a una rama existente.
+
+Crear y Cambiar a una Nueva Rama
+bash
+Copiar código
+git checkout -b <nombre_de_la_rama>
+Crea y cambia a una nueva rama en un solo paso.
+
+Ver Todas las Ramas
+bash
+Copiar código
+git branch
+Lista todas las ramas locales. Puedes ver ramas remotas con -r o ambas con -a.
+
+Borrar una Rama
+bash
+Copiar código
+git branch -d <nombre_de_la_rama>
+Elimina una rama local que ya ha sido fusionada.
+
+Fusionar Ramas
+bash
+Copiar código
+git merge <nombre_de_la_rama>
+Fusiona la rama especificada en la rama actual.
+
+Rebasing (Rebase)
+bash
+Copiar código
+git rebase <rama_base>
+Reorganiza los commits de una rama para que se apliquen sobre la rama base.
+
+6. Trabajo con Repositorios Remotos
+Verificar Repositorios Remotos
+bash
+Copiar código
+git remote -v
+Lista los repositorios remotos vinculados al repositorio local.
+
+Agregar un Repositorio Remoto
+bash
+Copiar código
+git remote add origin <url>
+Vincula un repositorio remoto (generalmente llamado origin) a tu repositorio local.
+
+Subir Cambios al Remoto
+bash
+Copiar código
+git push origin <nombre_de_la_rama>
+Sube los cambios de la rama especificada al repositorio remoto.
+
+Forzar un Push
+bash
+Copiar código
+git push --force
+Fuerza la subida de los cambios (cuidado, puede sobrescribir el historial remoto).
+
+Obtener Cambios del Remoto
+bash
+Copiar código
+git pull origin <nombre_de_la_rama>
+Combina los cambios de la rama remota en tu rama actual.
+
+7. Stashing: Guardar Cambios Temporalmente
+Guardar Cambios sin Confirmar
+bash
+Copiar código
+git stash
+Guarda temporalmente los cambios sin confirmar y deja el área de trabajo limpia.
+
+Ver el Historial de Stash
+bash
+Copiar código
+git stash list
+Lista todos los stashes guardados.
+
+Recuperar el Último Stash
+bash
+Copiar código
+git stash apply
+Aplica el último stash al área de trabajo.
+
+Eliminar el Último Stash
+bash
+Copiar código
+git stash drop
+Elimina el último stash del historial.
+
+8. Comandos Avanzados y Otras Herramientas Útiles
+Limpiar Archivos No Rastreados
+bash
+Copiar código
+git clean -f
+Elimina los archivos no rastreados en el área de trabajo.
+
+Borrar un Archivo del Repositorio sin Eliminarlo Localmente
+bash
+Copiar código
+git rm --cached <archivo>
+Elimina el archivo del repositorio, pero lo mantiene en tu sistema de archivos local.
+
+Reescribir el Historial (Rebase Interactivo)
+bash
+Copiar código
+git rebase -i <commit_hash>
+Permite modificar, combinar, o eliminar commits antiguos en la rama actual. Ideal para limpiar el historial antes de enviar los cambios.
+
+Cherry-Pick (Seleccionar Commits Individuales)
+bash
+Copiar código
+git cherry-pick <commit_hash>
+Aplica un commit específico de otra rama en la rama actual.
+
+9. Comandos para Colaboración y Resolución de Conflictos
+Verificar Cambios Pendientes en Ramas Remotas
+bash
+Copiar código
+git fetch
+Obtiene actualizaciones del repositorio remoto sin combinarlas en tu rama actual.
+
+Resolver Conflictos en una Fusión o Rebase
+Cuando ocurre un conflicto, edita los archivos para resolver los conflictos, luego:
+
+bash
+Copiar código
+git add <archivo>
+git commit
+O usa git merge --abort para cancelar la fusión o git rebase --abort para cancelar el rebase.
+
+10. Git Bisect (Para Encontrar Bugs)
+bash
+Copiar código
+git bisect start
+git bisect bad
+git bisect good <commit_hash>
+Realiza una búsqueda binaria entre commits para localizar el commit donde ocurrió un bug.
