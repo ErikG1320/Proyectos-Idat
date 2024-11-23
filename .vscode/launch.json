@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DesarrollowebApplication",
+            "request": "launch",
+            "mainClass": "com.examen3java.desarrolloweb.DesarrollowebApplication",
+            "projectName": "desarrolloweb"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "App",

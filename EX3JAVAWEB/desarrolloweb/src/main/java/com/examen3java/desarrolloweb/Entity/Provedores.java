@@ -34,6 +34,10 @@ public class Provedores {
     @Column(name = "telefono", length = 50, nullable = false)
     @NotNull
     private Integer telefono;
+    
+    @Column (name = "direccion" , length = 50 , nullable = false)
+    @NotNull
+    private String direccion;
 
     @Column (name = "pais" , length = 50 , nullable = false)
     @NotNull
