@@ -1,21 +1,18 @@
 package com.examen3java.desarrolloweb.repository;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.examen3java.desarrolloweb.Entity.Provedores;
 
-@Repository
-public interface ProveedoresRepository extends JpaRepository<Provedores, Integer> {
-    // Buscar proveedores por país
-    List<Provedores> findByPais(String pais);
-    
-    // Buscar proveedores por estado (por ejemplo: "activo")
-    List<Provedores> findByEstado(String estado);
+import java.math.BigDecimal;
+import java.util.List;
 
-    // Buscar proveedores con monto de crédito mayor o igual a un valor específico
+@Repository
+public interface ProveedoresRepository extends JpaRepository<Provedores, Long> {
+    List<Provedores> findByNombredistribuidorContaining(String nombredistribuidor);
+    List<Provedores> findByPais(String pais);
+    List<Provedores> findByEstado(String estado);
     List<Provedores> findByMontoCreditoGreaterThanEqual(BigDecimal monto);
+    List<Provedores> findByNombredistribuidorContainingAndPais(String nombredistribuidor, String pais);
 }

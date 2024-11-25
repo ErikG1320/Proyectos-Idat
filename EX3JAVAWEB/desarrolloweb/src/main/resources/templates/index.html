@@ -1,54 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista api</title>
+    <title>Proveedores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-table {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .custom-table thead {
+            background-color: #343a40;
+            color: #fff;
+        }
+        .custom-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Listado de personas</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NombreDistribuidor</th>
-                <th>Contacto</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>TipoProveedor</th>
-                <th>Ruc</th>
-                <th>Estado</th>
-                <th>FechaRegistro</th>
-                <th>Monto Credito</th>
-                <th>Dirección</th>
-    
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Se genera una fila por cada elemento en la lista Listado -->
-             <tr th:each="provedores : ${provedores}">
-                <td th:text="${provedores.idProveedor}"></td>
-                <td th:text="${provedores.nombreDistribuidor}"></td>
-                <td th:text="${provedores.contacto}"></td>
-                <td th:text="${provedores.email}"></td>
-                <td th:text="${provedores.telefono}"></td>
-                <td th:text="${provedores.direccion}"></td>
-                <td th:text="${provedores.tipoProveedor}"></td>
-                <td th:text="${provedores.ruc}"></td>
-                <td th:text="${provedores.estado}"></td>
-                <td th:text="${provedores.fechaRegistro}"></td>
-                <td th:text="${provedores.montoCredito}"></td>
-             </tr>
-             <a th:href="@{/proveedores/{id}(id=${proveedor.idProveedor})}" class="btn btn-info">Ver</a>
-                    <a th:href="@{/proveedores/editar/{id}(id=${proveedor.idProveedor})}" class="btn btn-warning">Editar</a>
-                    <a th:href="@{/proveedores/eliminar/{id}(id=${proveedor.idProveedor})}" class="btn btn-danger">Eliminar</a>
-        </tbody>
+        <h1 class="text-center mb-4">Listado de Proveedores</h1>
 
-    </table>
+        <!-- Botón Crear Proveedor -->
+        <div class="text-end mb-3">
+            <a href="/api/proveedores/Crear" class="btn btn-success">Crear Proveedor</a>
+        </div>
+        <!-- Formulario de Búsqueda -->
+        <div class="container mt-4">
+            <form action="/api/proveedores/busqueda" method="get" class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" name="nombre" class="form-control" placeholder="Buscar por Nombre del Distribuidor">
+                </div>
+                <div class="col-md-4">
+                    <select name="pais" class="form-select">
+                        <option value="" disabled selected>Buscar por País</option>
+                        <option value="Perú">Perú</option>
+                        <option value="México">México</option>
+                        <option value="Argentina">Argentina</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                </div>
+            </form>
+        </div>
 
+        <!-- Tabla de Proveedores -->
+        <div class="table-responsive custom-table mt-4">
+            <table class="table table-striped align-middle">
+                <thead class="text-center">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre Distribuidor</th>
+                        <th>Contacto</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Tipo Proveedor</th>
+                        <th>RUC</th>
+                        <th>Estado</th>
+                        <th>Fecha Registro</th>
+                        <th>Monto Crédito</th>
+                        <th>Dirección</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="provedores : ${provedores}" class="text-center">
+                        <td th:text="${provedores.idProveedor}"></td>
+                        <td th:text="${provedores.nombredistribuidor}"></td>
+                        <td th:text="${provedores.contacto}"></td>
+                        <td th:text="${provedores.email}"></td>
+                        <td th:text="${provedores.telefono}"></td>
+                        <td th:text="${provedores.tipoproveedor}"></td>
+                        <td th:text="${provedores.ruc}"></td>
+                        <td th:text="${provedores.estado}"></td>
+                        <td th:text="${provedores.fechaRegistro}"></td>
+                        <td th:text="${provedores.montoCredito}"></td>
+                        <td th:text="${provedores.direccion}"></td>
+                        <td>
+                            <!-- Edit Button -->
+                            <a th:href="@{/api/proveedores/editar/{id}(id=${provedores.idProveedor})}" class="btn btn-warning btn-sm">Editar</a>
+                            
+                            <!-- Delete Button -->
+                            <a th:href="@{/api/proveedores/eliminar/{id}(id=${provedores.idProveedor})}" class="btn btn-danger btn-sm" 
+                               onclick="return confirm('¿Estás seguro de que deseas eliminar este proveedor?');">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
 public class Provedores {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idProveedor;
+    private Long idProveedor;
 
     @Column(name = "nombredistribuidor", length = 50, nullable = false)
     @NotNull
@@ -49,7 +49,7 @@ public class Provedores {
 
     @Column (name = "ruc" , length = 50 , nullable =false)
     @NotNull
-    private Integer ruc;
+    private String ruc;
 
     @Column (name = "estado", length = 50 , nullable = false)
     private String estado = "activo";
@@ -61,11 +61,11 @@ public class Provedores {
     private BigDecimal montoCredito;
     
     // Getters and Setters
-    public Integer getIdProveedor() {
+    public Long getIdProveedor() {
         return idProveedor;
     }
     
-    public void setIdProveedor(Integer idProveedor) {
+    public void setIdProveedor(Long idProveedor) {
         this.idProveedor = idProveedor;
     }
 
@@ -101,6 +101,14 @@ public class Provedores {
         this.telefono = telefono;
     }
     
+    public String getDireccion() {
+        return direccion;
+    }
+    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
     public String getPais() {
         return pais;
     }
@@ -117,11 +125,11 @@ public class Provedores {
         this.tipoproveedor = tipoproveedor;
     }
     
-    public Integer getRuc() {
+    public String getRuc() {
         return ruc;
     }
     
-    public void setRuc(Integer ruc) {
+    public void setRuc(String ruc) {
         this.ruc = ruc;
     }
     

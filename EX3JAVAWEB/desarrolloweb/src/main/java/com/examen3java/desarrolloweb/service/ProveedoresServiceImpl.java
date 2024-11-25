@@ -1,13 +1,12 @@
 package com.examen3java.desarrolloweb.service;
 
-import java.math.BigDecimal;
-import java.util.List;
-
+import com.examen3java.desarrolloweb.Entity.Provedores;
+import com.examen3java.desarrolloweb.repository.ProveedoresRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.examen3java.desarrolloweb.Entity.Provedores;
-import com.examen3java.desarrolloweb.repository.ProveedoresRepository;
+import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 public class ProveedoresServiceImpl implements ProveedoresService {
@@ -21,7 +20,7 @@ public class ProveedoresServiceImpl implements ProveedoresService {
     }
 
     @Override
-    public Provedores findById(Integer id) {
+    public Provedores findById(Long id) {
         return proveedoresRepository.findById(id).orElse(null);
     }
 
@@ -31,7 +30,7 @@ public class ProveedoresServiceImpl implements ProveedoresService {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         proveedoresRepository.deleteById(id);
     }
 
@@ -48,5 +47,17 @@ public class ProveedoresServiceImpl implements ProveedoresService {
     @Override
     public List<Provedores> findByMontoCredito(BigDecimal monto) {
         return proveedoresRepository.findByMontoCreditoGreaterThanEqual(monto);
+    }
+
+    @Override
+    public List<Provedores> buscarPorNombreYPais(String nombredistribuidor, String pais) {
+        if (nombredistribuidor != null && pais != null) {
+            return proveedoresRepository.findByNombredistribuidorContainingAndPais(nombredistribuidor, pais);
+        } else if (nombredistribuidor != null) {
+            return proveedoresRepository.findByNombredistribuidorContaining(nombredistribuidor);
+        } else if (pais != null) {
+            return proveedoresRepository.findByPais(pais);
+        }
+        return findAll();
     }
 }

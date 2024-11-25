@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Proveedor</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this proveedor?</h1>
+    <form th:action="@{/api/proveedores/{id}(id=${proveedor.id})}" method="post">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

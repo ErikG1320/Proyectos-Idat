@@ -1,15 +1,14 @@
 package com.examen3java.desarrolloweb.controller;
-
-import java.math.BigDecimal;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import com.examen3java.desarrolloweb.Entity.Provedores;
 import com.examen3java.desarrolloweb.service.ProveedoresService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/proveedores")
@@ -21,79 +20,85 @@ public class ProveedoresController {
     // Obtener todos los proveedores
     @GetMapping
     public ResponseEntity<List<Provedores>> getAllProveedores() {
-        List<Provedores> proveedores = proveedoresService.findAll();
-        return new ResponseEntity<>(proveedores, HttpStatus.OK);
-    }
-
-    // Obtener proveedor por ID
-    @GetMapping("/{id}")
-    public ResponseEntity<Provedores> getProveedorById(@PathVariable Integer id) {
-        Provedores proveedor = proveedoresService.findById(id);
-        if (proveedor == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        try {
+            List<Provedores> proveedores = proveedoresService.findAll();
+            return new ResponseEntity<>(proveedores, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<>(proveedor, HttpStatus.OK);
     }
 
-    // Crear un nuevo proveedor
-    @PostMapping
+    // Ruta para crear un proveedor
+    @PostMapping("/crear")
     public ResponseEntity<Provedores> createProveedor(@RequestBody Provedores proveedor) {
-        return new ResponseEntity<>(proveedoresService.save(proveedor), HttpStatus.CREATED);
+        try {
+            return new ResponseEntity<>(proveedoresService.save(proveedor), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    // Actualizar un proveedor existente
-    @PutMapping("/{id}")
-    public ResponseEntity<Provedores> updateProveedor(@PathVariable Integer id, @RequestBody Provedores updatedProveedor) {
-        Provedores proveedor = proveedoresService.findById(id);
-        if (proveedor == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    // Ruta para obtener proveedor por ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Provedores> getProveedorById(@PathVariable Long id) {
+        try {
+            Provedores proveedor = proveedoresService.findById(id);
+            if (proveedor == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+            return new ResponseEntity<>(proveedor, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
 
-        // Actualizar campos
-        proveedor.setNombredistribuidor(updatedProveedor.getNombredistribuidor());
-        proveedor.setContacto(updatedProveedor.getContacto());
-        proveedor.setEmail(updatedProveedor.getEmail());
-        proveedor.setTelefono(updatedProveedor.getTelefono());
-        proveedor.setPais(updatedProveedor.getPais());
-        proveedor.setTipoproveedor(updatedProveedor.getTipoproveedor());
-        proveedor.setRuc(updatedProveedor.getRuc());
-        proveedor.setEstado(updatedProveedor.getEstado());
-        proveedor.setFechaRegistro(updatedProveedor.getFechaRegistro());
-        proveedor.setMontoCredito(updatedProveedor.getMontoCredito());
+    // Actualizar proveedor por ID
+    @PutMapping("/{id}")
+    public ResponseEntity<Provedores> updateProveedor(@PathVariable Long id, @RequestBody Provedores updatedProveedor) {
+        try {
+            Provedores proveedor = proveedoresService.findById(id);
+            if (proveedor == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
 
-        Provedores updated = proveedoresService.save(proveedor);
-        return new ResponseEntity<>(updated, HttpStatus.OK);
+            // Actualizar campos
+            proveedor.setNombredistribuidor(updatedProveedor.getNombredistribuidor());
+            proveedor.setContacto(updatedProveedor.getContacto());
+            proveedor.setEmail(updatedProveedor.getEmail());
+            proveedor.setTelefono(updatedProveedor.getTelefono());
+            proveedor.setDireccion(updatedProveedor.getDireccion());
+            proveedor.setPais(updatedProveedor.getPais());
+            proveedor.setTipoproveedor(updatedProveedor.getTipoproveedor());
+            proveedor.setRuc(updatedProveedor.getRuc());
+            proveedor.setEstado(updatedProveedor.getEstado());
+            proveedor.setFechaRegistro(updatedProveedor.getFechaRegistro());
+            proveedor.setMontoCredito(updatedProveedor.getMontoCredito());
+
+            Provedores updated = proveedoresService.save(proveedor);
+            return new ResponseEntity<>(updated, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     // Eliminar un proveedor por ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteProveedor(@PathVariable Integer id) {
-        Provedores proveedor = proveedoresService.findById(id);
-        if (proveedor == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<Void> deleteProveedor(@PathVariable Long id) {
+        try {
+            Provedores proveedor = proveedoresService.findById(id);
+            if (proveedor == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+            proveedoresService.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        proveedoresService.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    // Obtener proveedores por país
-    @GetMapping("/pais/{pais}")
-    public ResponseEntity<List<Provedores>> getProveedoresByPais(@PathVariable String pais) {
-        List<Provedores> proveedores = proveedoresService.findByPais(pais);
-        return new ResponseEntity<>(proveedores, HttpStatus.OK);
-    }
-
-    // Obtener proveedores activos
-    @GetMapping("/activos")
-    public ResponseEntity<List<Provedores>> getProveedoresActivos() {
-        List<Provedores> proveedores = proveedoresService.findByEstado("activo");
-        return new ResponseEntity<>(proveedores, HttpStatus.OK);
-    }
-
-    // Obtener proveedores con un monto de crédito mayor o igual al especificado
-    @GetMapping("/creditos/{monto}")
-    public ResponseEntity<List<Provedores>> getProveedoresConCreditos(@PathVariable BigDecimal monto) {
-        List<Provedores> proveedores = proveedoresService.findByMontoCredito(monto);
-        return new ResponseEntity<>(proveedores, HttpStatus.OK);
+    // Manejar parámetros inválidos en la URL
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<String> handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
+        return new ResponseEntity<>("El ID debe ser un número válido.", HttpStatus.BAD_REQUEST);
     }
 }

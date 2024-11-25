@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Proveedores</title>
+</head>
+<body>
+    <h1>Buscar Proveedores</h1>
+    <form th:action="@{/api/proveedores/busqueda}" method="get">
+        <label for="nombredistribuidor">Nombre Distribuidor:</label>
+        <input type="text" id="nombredistribuidor" name="nombredistribuidor"><br>
+
+        <label for="pais">Pais:</label>
+        <input type="text" id="pais" name="pais"><br>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id Proveedor</th>
+                <th>Nombre Distribuidor</th>
+                <th>Contacto</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Tipo Proveedor</th>
+                <th>RUC</th>
+                <th>Fecha Registro</th>
+                <th>Monto Crédito</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="proveedor : ${proveedores}">
+                <td th:text="${proveedor.nombredistribuidor}"></td>
+                <td th:text="${provedores.idProveedor}"></td>
+                <td th:text="${provedores.nombredistribuidor}"></td>
+                <td th:text="${provedores.contacto}"></td>
+                <td th:text="${provedores.email}"></td>
+                <td th:text="${provedores.telefono}"></td>
+                <td th:text="${provedores.tipoproveedor}"></td>
+                <td th:text="${provedores.ruc}"></td>
+                <td th:text="${provedores.estado}"></td>
+                <td th:text="${provedores.fechaRegistro}"></td>
+                <td th:text="${provedores.montoCredito}"></td>
+                <td th:text="${provedores.direccion}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
